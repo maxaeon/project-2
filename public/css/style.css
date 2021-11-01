@@ -3,6 +3,7 @@ header,
   border-bottom: 1px solid #ccc;
 }
 
+
 .no-button {
   background: none;
   border: none;
@@ -42,4 +43,24 @@ header,
 
 .bg-off-white {
   background: #F5F5F5;
+}
+
+.text-dark-green {
+  color: #202E1D;
+}
+
+.text-midnight-green {
+  color: #100804;
+}
+
+.text-light-green {
+  color: #B2CFAB;
+}
+
+.text-sky-blue {
+  color: #B7DFF6;
+}
+
+.text-off-white {
+  color: #F5F5F5;
 }
