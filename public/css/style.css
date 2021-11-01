@@ -1,4 +1,5 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -21,4 +22,24 @@ header, .project:not(:last-child) {
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
+}
+
+.bg-dark-green {
+  background: #202E1D;
+}
+
+.bg-midnight-green {
+  background: #100804;
+}
+
+.bg-light-green {
+  background: #B2CFAB;
+}
+
+.bg-sky-blue {
+  background: #B7DFF6;
+}
+
+.bg-off-white {
+  background: #F5F5F5;
 }
