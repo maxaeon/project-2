@@ -1,8 +1,6 @@
-header,
-.project:not(:last-child) {
+header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-
 
 .no-button {
   background: none;
@@ -41,6 +39,10 @@ header,
   background: #B7DFF6;
 }
 
+.bg-lavender {
+  background: #B6A1CE;
+}
+
 .bg-off-white {
   background: #F5F5F5;
 }
@@ -63,4 +65,35 @@ header,
 
 .text-off-white {
   color: #F5F5F5;
+}
+
+.border-1 {
+  border-width: 1px;
+}
+.border-b-1 {
+  border-bottom-width: 1px;
+}
+
+#add-garden {
+  cursor: pointer;
+}
+
+
+::-webkit-scrollbar {
+  width: 1vh;
+  height: 5vh;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B6A1CE;
+  border: 1px solid #100804;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
