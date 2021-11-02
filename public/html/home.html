@@ -10,7 +10,7 @@
     <title>Chicken Run</title>
 </head>
 
-<body class="bg-light-green">
+<body class=" antialiased bg-light-green">
     <!-- Navbar -->
     <nav class="bg-white shadow-lg">
         <div class="max-w-6xl mx-auto px-4">
@@ -87,57 +87,62 @@
                 </div>
             </div>
         </div>
-    </main>
-    <section class="antialiased">
-        <!-- Contact Cards -->
-        <div class="flex w-full min-h-screen justify-center">
-            <div class="bg-dark-green flex flex-col space-y-6 w-full max-w-4xl p-8 rounded-xl shadow-lg text-white">
-                <div class="flex flex-col space-y-8 justify-between">
-                    <div>
-                        <h1 class="font-bold text-4xl tracking-wide">Contact Us!</h1>
-                        <p class=" pt-2 text-sky-blue text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Corporis provident necessitatibus
-                            aliquid ad nostrum reprehenderit eos minima praesentium, asperiores culpa?
-                        </p>
-                    </div>
-                    <div class="inline-flex space-x-2 items-center">
-                        <ion-icon name="logo-github" class="text-sky-blue text-xl"></ion-icon>
-                        <a href="https://github.com/tevissaur">Tevis</a>
-                    </div>
-                    <div>
-                        <ion-icon name="mail-outline" class="text-sky-blue text-xl"></ion-icon>
-                        <a href="tevisreilly1@gmail.com">GMail</a>
 
+        <section class="antialiased">
+            <!-- Contact Cards -->
+            <div class="flex w-full min-h-screen justify-center items-center">
+                <div
+                    class="bg-dark-green flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-off-white">
+                    <div class="flex flex-col space-y-8 justify-between">
+                        <div>
+                            <h1 class="font-bold text-4xl tracking-wide">Contact Us!</h1>
+                            <p class=" pt-2 text-sky-blue text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                elit.
+                                Corporis provident necessitatibus
+                                aliquid ad nostrum reprehenderit eos minima praesentium, asperiores culpa?
+                            </p>
+                        </div>
+                        <div class="flex flex-col space-y-6">
+                            <div class="inline-flex space-x-2 items-center">
+                                <ion-icon name="logo-github" class="text-sky-blue text-xl"></ion-icon>
+                                <a href="https://github.com/tevissaur">Tevis</a>
+                            </div>
+                            <div class="inline-flex space-x-2 items-center">
+                                <ion-icon name="mail-outline" class="text-sky-blue text-xl"></ion-icon>
+                                <a href="tevisreilly1@gmail.com">GMail</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="bg-off-white rounded-xl shadow-lg p-8">
-                        <form action="" class="flex flex-col space-y-4">
-                            <div>
-                                <label for="for="" class=" text-midnight-green text-sm">Your name</label>
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Your name"
-                                    class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
-                            </div>
-                            <div>
-                                <label for="" class="text-midnight-green text-sm">Message</label>
-                            </div>
-                            <div>
-                                <textarea type="text" placeholder="Message" rows="4"
-                                    class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+                    <div>
+                        <div class="bg-off-white rounded-xl shadow-lg p-8 text-gray-600 md:w-80">
+                            <form action="" class="flex flex-col space-y-4">
+                                <div>
+                                    <label for="for="" class=" text-midnight-green text-sm">Your name</label>
+                                    <input type="text" placeholder="Your name"
+                                        class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+                                </div>
+                                <div>
+                                    <label for="for="" class=" text-midnight-green text-sm">Email Address</label>
+                                    <input type="text" placeholder="Email Address"
+                                        class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+                                </div>
+                                <div>
+                                    <label for="" class="text-midnight-green text-sm">Message</label>
+                                    <textarea type="text" placeholder="Message" rows="4"
+                                        class="ring-1 ring-gray-300 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
                                 </textarea>
-                            </div>
-                            <button
-                                class="inline-block self-end bg-midnight-green font-bold rounded-lg px-6 py-2 uppercase text-sm">
-                                Send Message</button>
-                        </form>
+                                </div>
+                                <button
+                                    class="inline-block self-end bg-midnight-green font-bold rounded-lg px-6 py-2 uppercase text-sm">
+                                    Send Message</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
 </body>
