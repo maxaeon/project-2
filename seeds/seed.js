@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { User, Garden } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const gardenData = require('./gardenData.json');
 const plantData = require('./plantData.json');
 const animalData = require('./animalData.json');
 
@@ -14,9 +14,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
+  for (const garden of gardenData) {
+    await Garden.create({
+      ...garden,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
