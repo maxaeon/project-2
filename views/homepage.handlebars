@@ -3,6 +3,7 @@
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
+      {{> dashboard-main}}
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
       <a href="/project/{{project.id}}">{{project.name}}</a>
