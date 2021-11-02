@@ -18,10 +18,5 @@
     "name": "Adam",
     "email": "adam@gmail.com",
     "password": "password12345"
-  },
-  {
-    "name": "Bryon",
-    "email": "bryon@yahoo.com",
-    "password": "password12345"
   }
 ]
