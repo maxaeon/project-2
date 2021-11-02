@@ -74,7 +74,7 @@ header, .project:not(:last-child) {
   border-bottom-width: 1px;
 }
 
-#add-garden {
+#add-garden, #delete-garden {
   cursor: pointer;
 }
 
