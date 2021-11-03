@@ -105,7 +105,8 @@
 
 
                 <!-- Gardens component -->
-                <div class="col-span-full md:col-span-5 lg:col-span-6 row-span-2 lg:row-span-2 min-h-min border-1 border-black border-solid rounded m-3 text-left">
+                <div
+                    class="col-span-full md:col-span-5 lg:col-span-6 row-span-2 lg:row-span-2 min-h-min border-1 border-black border-solid rounded m-3 text-left">
                     <div class="text-lg font-bold rounded-t p-3 border-b-2 border-black bg-off-white">
                         <div class="flex flex-row justify-between">
                             <p>Gardens</p>
@@ -119,6 +120,38 @@
                         </div>
                     </div>
                     <ul class="flex justify-between flex-wrap">
+
+                        <!-- User's gardens -->
+                        <li class="w-full border-b-1 flex justify-between mb-3 p-3">
+                            <p>Backyard </p>
+                            <span class="self-center" id="delete-garden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="red">
+                                    <path fill-rule="evenodd"
+                                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="w-full border-b-1 flex justify-between mb-3 p-3">
+                            <p>Backyard </p>
+                            <span class="self-center" id="delete-garden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="red">
+                                    <path fill-rule="evenodd"
+                                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="w-full border-b-1 flex justify-between mb-3 p-3">
+                            <p>Backyard </p>
+                            <span class="self-center" id="delete-garden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="red">
+                                    <path fill-rule="evenodd"
+                                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </li>
                         <li class="w-full border-b-1 flex justify-between mb-3 p-3">
                             <p>Backyard </p>
                             <span class="self-center" id="delete-garden">
@@ -134,13 +167,14 @@
 
 
                 <!-- Weather component -->
-                <section class="col-span-full md:col-span-7 lg:col-span-6 row-span-2 lg:row-span-2 min-w-min border-1 border-black border-solid rounded m-3">
+                <section
+                    class="col-span-full md:col-span-7 lg:col-span-6 row-span-2 lg:row-span-2 min-w-min border-1 border-black border-solid rounded m-3">
                     <div class="text-lg font-bold rounded-t p-3 border-b-2 border-black bg-off-white text-left">
                         <p>Weather</p>
                     </div>
                     <div class="grid grid-cols-6 grid-rows-6">
                         <div class="col-span-full row-start-1 row-end-4 bg-sky-blue border-b-1 border-black">
-                            
+
                         </div>
                         <div class="col-start-1 col-end-3 row-start-5 row-end-7">Tomorrow</div>
                         <div class="col-start-4 col-end-6 row-start-5 row-end-7">Today</div>
@@ -150,38 +184,46 @@
 
 
                 <!-- Plant of the day Component -->
-                <section class="col-span-full md:col-span-5 lg:col-span-4 row-start-8 lg:row-start-3 lg:row-end-5 min-w-min border-1 border-black border-solid rounded m-3 text-left">
+                <section
+                    class="col-span-full row-end-auto md:col-span-5 lg:col-span-4 lg:row-start-3 lg:row-end-5 min-w-min border-1 border-black border-solid rounded m-3 text-left">
                     <div class="text-lg font-bold rounded-t p-3 border-b-2 border-black bg-off-white text-left">
                         <p>Plant of the Day</p>
                     </div>
-                    
+                    text
                 </section>
 
                 <!-- Article of the Day component -->
-                <section class="col-span-full md:col-span-7 lg:col-span-4 row-start-8 lg:row-start-5 lg:row-end-7 min-w-min border-1 border-black border-solid rounded m-3 text-left">
+                <section
+                    class="col-span-full row-end-auto md:col-span-7 lg:col-span-4 lg:row-start-5 lg:row-end-7 min-w-min border-1 border-black border-solid rounded m-3 text-left">
                     <div class="text-lg font-bold rounded-t p-3 border-b-2 border-black bg-off-white text-left">
                         <p>Article of the Day</p>
                     </div>
-
+                    text
                 </section>
 
                 <!-- Calender component -->
-                <section class="col-span-12 lg:col-span-8 row-start-3 row-span-5 lg:row-start-3 lg:row-span-full min-w-min border-1 border-black border-solid rounded m-3 text-left">
-                    <div class="text-lg font-bold rounded-t p-3 border-b-2 border-black bg-off-white text-center flex flex-row justify-center">
+                <section
+                    class="col-span-12 lg:col-span-8 row-start-3 row-span-5 lg:row-start-3 lg:row-span-full min-w-min border-1 border-black border-solid rounded m-3 text-left">
+                    <div
+                        class="text-lg font-bold rounded-t p-3 border-b-2 border-black bg-off-white text-center flex flex-row justify-center">
                         <span class="self-center" id="prev-month">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                              </svg>
-                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </span>
                         <p class="mx-3">Month</p>
                         <span class="self-center" id="next-month">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
                         </span>
                     </div>
                     <div class="grid grid-cols-7 grid-rows-6">
-                        
+
                     </div>
 
                 </section>
