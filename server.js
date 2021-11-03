@@ -25,20 +25,15 @@ const sqlConfig = {
 }
 
 // Start server and listen at http://localhost:3001/
-const server = app.listen(3001, function () {
-  let host = server.address().address;
-  let port = server.address().port;
-  console.log('app listening at http://localhost:3001');
-})
-// const sess = {
-//   secret: 'Super secret secret',
-//   cookie: {},
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize
-//   })
-// };
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
 app.use(session(sess));
 
@@ -47,34 +42,30 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
-app.use(express.urlencoded({
-  extended: true
-}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({
-  force: false
-}).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 
 
-// app 
-app.listen(3001, () => console.log('listening at 3001'));
-app.use(express.static('public'));
-app.use(express.json({
-  limit: '1mb'
-}));
-// POST
-app.post('/api', (request, response) => {
-  console.log('I got a request');
-  console.log(request.body);
-  const data = request.body;
-  response.json({
-    status: 'success',
-    latitude: data.lat,
-    longitude: data.lon
-  });
-});
+// // app 
+// app.listen(3001, () => console.log('listening at 3001'));
+// app.use(express.static('public'));
+// app.use(express.json({
+//   limit: '1mb'
+// }));
+// // POST
+// app.post('/api', (request, response) => {
+//   console.log('I got a request');
+//   console.log(request.body);
+//   const data = request.body;
+//   response.json({
+//     status: 'success',
+//     latitude: data.lat,
+//     longitude: data.lon
+//   });
+// });
