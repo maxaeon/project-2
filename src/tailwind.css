@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply shadow-md py-3 px-6 rounded-md transition duration-300;
+}
+
+.btn-dark-green {
+    @apply text-white background: #202E1D;
+
+}
+
+/* .btn-light-green {
+    @apply .bg-light-green;
+} */
