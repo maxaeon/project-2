@@ -10,7 +10,7 @@
   border: 0;
   color: #fff;
 }
-#cal-mth, #cal-yr { background: #ea4c4c; }
+#cal-mth, #cal-yr { background: #4f9e48; }
 #cal-set { background: #4e83d9; }
 
 /* [CALENDAR] */
@@ -22,7 +22,7 @@
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  background: #f37070;
+  background: #87aa84;
   padding: 15px;
   text-align: center;
 }
@@ -48,7 +48,7 @@
   font-size: 0.8em;
   font-weight: bold;
   overflow: hidden;
-  color: #ff5d5d;
+  color: #4f9e48;
 }
 
 /* [ADD/EDIT EVENT] */
@@ -81,7 +81,7 @@
   margin: 5px;
   font-size: 1.2em;
   border: 0;
-  background: #ea4c4c;
+  background: #4f9e48;
   color: #fff;
 }
 
