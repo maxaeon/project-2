@@ -29,13 +29,13 @@ Garden.init(
         allowNull: true,
     },
 
-    plant_date: {
+    sewnDate: {
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: DataTypes.NOW,
     },
 
-    plant_condtions: {
+    plantCondtions: {
         type: DataTypes.STRING,
         allowNull: true,
     },
