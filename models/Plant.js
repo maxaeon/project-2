@@ -1,0 +1,113 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
+class Garden extends Model {}
+
+
+Garden.init(
+
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+
+    plant: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
+    annual: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    perennial: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    sewnDate: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
+    },
+
+    plantCondtions: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    sun: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    shade: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    depth: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    groups: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    rows: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    single: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    individual_seed_sprout_spacing: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    spacing_between_rows_groups: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    days_to_germination_min: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+
+    days_to_germination_min: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+
+    days_to_germination_min: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+
+    days_to_germination_min: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+  },
+
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'garden',
+  }
+);
+
+module.exports = Garden;
