@@ -85,7 +85,7 @@ Garden.init(
         allowNull: true,
     },
 
-    days_to_germination_min: {
+    days_to_germination_m: {
         type: DataTypes.INTEGER,
         allowNull: true,
     },
