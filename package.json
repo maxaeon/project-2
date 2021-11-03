@@ -1,9 +1,10 @@
 {
   "name": "crowd-funding",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "build:tailwindcss": "-i ../src/tailwind.css -o ../public/css/tailwind.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/seed.js"
   },
@@ -19,21 +20,11 @@
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.14",
-    "sequelize": "^6.3.5",
-    "tailwindcss": "^2.2.19"
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maxaeon/group-project-2.git"
-  },
-  "bugs": {
-    "url": "https://github.com/maxaeon/group-project-2/issues"
-  },
-  "homepage": "https://github.com/maxaeon/group-project-2#readme",
-  "description": ""
+  }
 }

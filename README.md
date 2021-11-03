@@ -16,7 +16,7 @@ The project will allow users to register for an account, access information abou
 
 ## Authors
 
-Adam, Max, Tevis, and Travis (and maybe Bryon?)
+Adam, Max, Tevis, and Travis 
 
 ## License
 
