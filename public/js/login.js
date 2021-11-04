@@ -9,6 +9,8 @@ const loginCard = document.querySelector('#loginCard');
 const registerCard = document.querySelector('#registerCard');
 // Event Listener
 navLoginLink.addEventListener('click', () => {
+  //  If login is selected display login card
+  // else hide registration card
 
   if (loginCard.style.display === 'none') {
     loginCard.style.display = 'block';
@@ -16,7 +18,8 @@ navLoginLink.addEventListener('click', () => {
     registerCard.style.display = 'none'
   }
 });
-
+// If Registration is selected display register card
+// Else hide login card
 navRegisterLink.addEventListener('click', () => {
   if (registerCard.style.display === 'none') {
     registerCard.style.display = 'block';
@@ -89,10 +92,3 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
-
-
-//  If login is selected display login card
-// else hide registration card
-
-// If Registration is selected display register card
-// Else hide login card
