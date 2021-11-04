@@ -1,3 +1,26 @@
+//Variables
+const hide = style.display = "none";
+const show = style.display = "";
+
+// Selectors
+// NavBar 
+const navLoginLink = document.querySelector('#loginWindow');
+const navRegisterLink = document.querySelector('#registerWindow');
+
+// Cards
+const loginCard = document.querySelector('#loginCard');
+const registerCard = document.queryCommandIndeterm('#registerCard');
+
+// Event Listener
+navLoginLink.addEventListener('click', () => {
+  return loginCard.style.display = "none";
+  .then.
+
+});
+registerCard.addEventListener('click', () => {
+
+});
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -62,3 +85,10 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+
+//  If login is selected display login card
+// else hide registration card
+
+// If Registration is selected display register card
+// Else hide login card
