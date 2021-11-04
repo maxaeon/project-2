@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Garden , Plant,} = require('../../models');
 
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -67,6 +68,7 @@ router.get('/', async (req, res) => {
           {
             model:Garden,
             model:Plant
+
           }
         ]
       }
@@ -90,6 +92,7 @@ router.get('/:id', async (req, res) => {
           {
             model:Garden,
             model:Plant
+
           }
         ]
       }

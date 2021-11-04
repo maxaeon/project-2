@@ -18,6 +18,7 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const gardensData = await Garden.findAll({
+
       ...req.body,
     });
     res.status(200).json(gardensData);
@@ -30,18 +31,20 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const gardenData = await Garden.findByPk(
+
       req.params.id, 
       {
         include: [
           {
             model:User,
-          
+
           }
         ]
       }
     );
     if (!gardenData) {
       res.status(404).json({ message: 'Sorry about that, no records found for this user.' });
+
       return;
     }
     res.status(200).json(gardenData);
@@ -61,6 +64,7 @@ router.delete('/:id', async (req, res) => {
 
     if (!gardenData) {
       res.status(404).json({ message: 'Sorry about that, no records found for this user.' });
+
       return;
     }
 
