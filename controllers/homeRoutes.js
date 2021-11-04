@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
     const gardens = gardenData.map((garden) => garden.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('dashboard', { 
+    res.render('homepage', { 
       gardens, 
       logged_in: req.session.logged_in 
     });
@@ -48,29 +48,29 @@ router.get('/garden/:id', async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
-  try {
-    const plantData = await Plant.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+// router.get('/', async (req, res) => {
+//   try {
+//     const plantData = await Plant.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
 
-    // Serialize data so the template can read it
-    const plants = plantData.map((plants) => plants.get({ plain: true }));
+//     // Serialize data so the template can read it
+//     const plants = plantData.map((plants) => plants.get({ plain: true }));
 
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      plants, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     // Pass serialized data and session flag into template
+//     res.render('homepage', { 
+//       plants, 
+//       logged_in: req.session.logged_in 
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/plants/:id', async (req, res) => {
   try {
@@ -106,7 +106,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
+    res.render('dashboard', {
       ...user,
       logged_in: true
     });
