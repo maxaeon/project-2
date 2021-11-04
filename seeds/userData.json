@@ -16,12 +16,7 @@
   },
   {
     "name": "Adam",
-    "email": "adam@hotmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Bryon",
-    "email": "bryon@yahoo.com",
+    "email": "adam@gmail.com",
     "password": "password12345"
   }
 ]

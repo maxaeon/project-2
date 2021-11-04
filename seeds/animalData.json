@@ -1,7 +1,7 @@
 [
         {
-        "animal species": "",
-        "breed, if applicable": "",
+        "animal_species": "",
+        "breed": "",
         "when fertile": "",
         "average number of offspring": "",
         "gestation period": "",
@@ -14,8 +14,8 @@
         "additional comments": ""
     },
     {
-        "animal species": "pig",
-        "breed, if applicable": "-",
+        "animal_species": "pig",
+        "breed": "-",
         "when fertile": "every 21 days",
         "average number of offspring": "10-16 per litter",
         "gestation period": "114 days",
@@ -28,8 +28,8 @@
         "additional comments": "Plan on how to deal with manure and flies."
     },
     {
-        "animal species": "cow",
-        "breed, if applicable": "-",
+        "animal_species": "cow",
+        "breed": "-",
         "when fertile": "every 21 days, but cows should only be bred about once each year",
         "average number of offspring": "1",
         "gestation period": "283 days",
@@ -42,8 +42,8 @@
         "additional comments": "Regular veterinary appointments are recommended. Cows can be used as milk-producers, meat, breeding stock, and more."
     },
     {
-        "animal species": "horse",
-        "breed, if applicable": "-",
+        "animal_species": "horse",
+        "breed": "-",
         "when fertile": "every 19-22 days spring through autumn",
         "average number of offspring": "1",
         "gestation period": "11-12 months",
@@ -56,8 +56,8 @@
         "additional comments": "Plan on how to deal with manure and flies. Regular veterinary appointments are recommended. Older horses are better for first-time horse owners, so foals should only be sold to experienced horse-owners."
     },
     {
-        "animal species": "goat",
-        "breed, if applicable": "-",
+        "animal_species": "goat",
+        "breed": "-",
         "when fertile": "every 21 days",
         "average number of offspring": "2-3 kids",
         "gestation period": "150 days",
@@ -70,8 +70,8 @@
         "additional comments": "Plan on how to deal with manure and flies. Regular veterinary appointments are recommended."
     },
     {
-        "animal species": "rabbit",
-        "breed, if applicable": "-",
+        "animal_species": "rabbit",
+        "breed": "-",
         "when fertile": "a female rabbit can have up to 3-4 litters each season",
         "average number of offspring": "1-14 per litter (average of 6 per litter)",
         "gestation period": "-",
@@ -84,8 +84,8 @@
         "additional comments": "Plan on how to deal with manure."
     },
     {
-        "animal species": "chicken",
-        "breed, if applicable": "-",
+        "animal_species": "chicken",
+        "breed": "-",
         "when fertile": "-",
         "average number of offspring": "6-16 babies at a time",
         "gestation period": "3 week incubation period",
@@ -98,8 +98,8 @@
         "additional comments": "Plan on how to deal with manure."
     },
     {
-        "animal species": "duck",
-        "breed, if applicable": "-",
+        "animal_species": "duck",
+        "breed": "-",
         "when fertile": "-",
         "average number of offspring": "12",
         "gestation period": "4 weeks incubation period",
@@ -112,8 +112,8 @@
         "additional comments": "Plan on how to deal with manure."
     },
     {
-        "animal species": "domestic cat",
-        "breed, if applicable": "-",
+        "animal_species": "domestic cat",
+        "breed": "-",
         "when fertile": "when the female is in heat, which usually occurs several times each year",
         "average number of offspring": "range is usually 1-12, average is 4",
         "gestation period": "58-67 days",
@@ -126,8 +126,8 @@
         "additional comments": "Cat waste is particularly dangerous for pregnant women to be exposed to. Regular veterinary appointments for cats are recommended. Due to shelter overcrowding, breeding cats should only be done after careful consideration, and any cats not intended to be bred should not be allowed to reproduce."
     },
     {
-        "animal species": "dog",
-        "breed, if applicable": "-",
+        "animal_species": "dog",
+        "breed": "-",
         "when fertile": "when the female is in heat, which usually occurs several times each year",
         "average number of offspring": "varies by breed, average is 8",
         "gestation period": "58-68 days",
