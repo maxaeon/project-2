@@ -4,7 +4,6 @@
 // const signInBtn = document.getElementById('sign-in-button')
 
 
-
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
