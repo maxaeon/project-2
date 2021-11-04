@@ -5,7 +5,7 @@ const plantsRoutes = require('./plantsRoutes')
 
 
 router.use('/users', userRoutes);
-router.use('/garden', gardenRoutes);
+router.use('/gardens', gardenRoutes);
 router.use('/plants', plantsRoutes )
 
 
