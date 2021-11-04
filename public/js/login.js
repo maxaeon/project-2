@@ -7,19 +7,19 @@ const navRegisterLink = document.querySelector('#registerWindow');
 // Cards
 const loginCard = document.querySelector('#loginCard');
 const registerCard = document.querySelector('#registerCard');
-
 // Event Listener
 navLoginLink.addEventListener('click', () => {
-  if (registerCard.style.display === 'none') {
-    registerCard.style.display = 'block';
+
+  if (loginCard.style.display === 'none') {
+    loginCard.style.display = 'block';
   } else {
     registerCard.style.display = 'none'
   }
 });
 
 navRegisterLink.addEventListener('click', () => {
-  if (loginCard.style.display === 'none') {
-    loginCard.style.display = 'block';
+  if (registerCard.style.display === 'none') {
+    registerCard.style.display = 'block';
   } else {
     loginCard.style.display = 'none'
   }
