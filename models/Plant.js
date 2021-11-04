@@ -80,7 +80,12 @@ Garden.init(
         allowNull: true,
     },
 
-    days_to_germination_min: {
+    days_to_maturation_min: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+
+    days_to_maturation_max: {
         type: DataTypes.INTEGER,
         allowNull: true,
     },
@@ -89,13 +94,9 @@ Garden.init(
         type: DataTypes.INTEGER,
         allowNull: true,
     },
+    
 
-    days_to_germination_min: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-    },
-
-    days_to_germination_min: {
+    days_to_germination_max: {
         type: DataTypes.INTEGER,
         allowNull: true,
     },
