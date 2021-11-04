@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User, Garden } = require('../../models');
+const { User, Garden , Plant,} = require('../../models');
+
 
 router.post('/', async (req, res) => {
   try {
@@ -65,7 +66,9 @@ router.get('/', async (req, res) => {
       {
         include: [
           {
-            model:Garden
+            model:Garden,
+            model:Plant
+
           }
         ]
       }
@@ -87,7 +90,9 @@ router.get('/:id', async (req, res) => {
       {
         include: [
           {
-            model:Garden
+            model:Garden,
+            model:Plant
+
           }
         ]
       }

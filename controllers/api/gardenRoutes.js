@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Garden, User } = require('../../models');
-const withAuth = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 
 // CREATE a Garden
 router.post('/', async (req, res) => {
@@ -17,7 +17,8 @@ router.post('/', async (req, res) => {
 // GET all Gardens
 router.get('/', async (req, res) => {
   try {
-    let gardensData = await Garden.findAll({
+    const gardensData = await Garden.findAll({
+
       ...req.body,
     });
     res.status(200).json(gardensData);
@@ -29,18 +30,21 @@ router.get('/', async (req, res) => {
 // GET a single Garden
 router.get('/:id', async (req, res) => {
   try {
-    let gardenData = await Garden.findByPk(
+    const gardenData = await Garden.findByPk(
+
       req.params.id, 
       {
         include: [
           {
-            model:User
+            model:User,
+
           }
         ]
       }
     );
     if (!gardenData) {
-      res.status(404).json({ message: 'No location found with this id!' });
+      res.status(404).json({ message: 'Sorry about that, no records found for this user.' });
+
       return;
     }
     res.status(200).json(gardenData);
@@ -59,7 +63,8 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!gardenData) {
-      res.status(404).json({ message: 'No plants found with this id!' });
+      res.status(404).json({ message: 'Sorry about that, no records found for this user.' });
+
       return;
     }
 
