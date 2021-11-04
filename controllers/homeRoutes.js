@@ -4,21 +4,8 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const gardenData = await Garden.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const gardens = gardenData.map((garden) => garden.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      gardens, 
+    // Pass session flag into template
+    res.render('homepage', {
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -96,19 +83,19 @@ router.get('/plants/:id', async (req, res) => {
 
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    // const userData = await User.findByPk(req.session.user_id, {
-    //   attributes: { exclude: ['password'] },
-    //   include: [{ model: Garden }],
-    // });
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Garden }],
+    });
 
-    // const user = userData.get({ plain: true });
+    const user = userData.get({ plain: true });
 
     res.render('dashboard', {
-      // ...user,
-      // logged_in: true
+      ...user,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
