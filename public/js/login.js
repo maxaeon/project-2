@@ -1,6 +1,7 @@
 // Selectors
 // NavBar 
 const navLoginLink = document.querySelector('#loginWindow');
+
 const navRegisterLink = document.querySelector('#registerWindow');
 
 // Cards
@@ -16,7 +17,7 @@ navLoginLink.addEventListener('click', () => {
   }
 });
 
-registerLink.addEventListener('click', () => {
+navRegisterLink.addEventListener('click', () => {
   if (loginCard.style.display === 'none') {
     loginCard.style.display = 'block';
   } else {
