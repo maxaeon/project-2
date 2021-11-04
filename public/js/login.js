@@ -1,3 +1,30 @@
+// Selectors
+// NavBar 
+const navLoginLink = document.querySelector('#loginWindow');
+
+const navRegisterLink = document.querySelector('#registerWindow');
+
+// Cards
+const loginCard = document.querySelector('#loginCard');
+const registerCard = document.querySelector('#registerCard');
+// Event Listener
+navLoginLink.addEventListener('click', () => {
+
+  if (loginCard.style.display === 'none') {
+    loginCard.style.display = 'block';
+  } else {
+    registerCard.style.display = 'none'
+  }
+});
+
+navRegisterLink.addEventListener('click', () => {
+  if (registerCard.style.display === 'none') {
+    registerCard.style.display = 'block';
+  } else {
+    loginCard.style.display = 'none'
+  }
+});
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -62,3 +89,10 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+
+//  If login is selected display login card
+// else hide registration card
+
+// If Registration is selected display register card
+// Else hide login card
