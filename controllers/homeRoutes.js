@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Garden, User, Plant } = require('../models');
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -83,7 +83,7 @@ router.get('/plants/:id', async (req, res) => {
       ],
     });
 
-    const plant = plaData.get({ plain: true });
+    const plant = plantData.get({ plain: true });
 
     res.render('plant', {
       ...plant,

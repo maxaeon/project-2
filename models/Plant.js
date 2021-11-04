@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Garden extends Model {}
+class Plant extends Model {}
 
 
-Garden.init(
+Plant.init(
 
   {
     id: {
@@ -16,7 +16,7 @@ Garden.init(
 
     plant: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 
     annual: {
@@ -85,20 +85,34 @@ Garden.init(
         allowNull: true,
     },
 
-    days_to_germination_m: {
+    days_to_germination_max: {
         type: DataTypes.INTEGER,
         allowNull: true,
     },
 
-    days_to_germination_min: {
+    days_to_maturity_min: {
         type: DataTypes.INTEGER,
         allowNull: true,
     },
 
-    days_to_germination_min: {
+    days_to_maturity_max: {
         type: DataTypes.INTEGER,
         allowNull: true,
     },
+    user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
+      },
+      garden_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'garden',
+          key: 'id',
+        },
+      },
   },
 
   {
@@ -106,8 +120,8 @@ Garden.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'garden',
+    modelName: 'plant',
   }
 );
 
-module.exports = Garden;
+module.exports = Plant;
