@@ -11,15 +11,15 @@ Garden.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-User.hasMany(Plant, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+Garden.hasMany(Plant, {
+  foreignKey: 'garden_id',
+  onDelete: 'SET NULL'
 });
 
 
-Plant.belongsTo(User, {
-  foreignKey: 'user_id',
-  foreignKey: 'garden_id'
+Plant.belongsTo(Garden, {
+  foreignKey: 'garden_id',
+  onDelete: 'SET NULL'
 });
 
-module.exports = { User, Garden ,Plant};
+module.exports = { User, Garden, Plant };
