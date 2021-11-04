@@ -12,8 +12,19 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({
+  helpers
+});
 
+// Connection string parameters
+const sqlConfig = {
+  user: 'root',
+  password: 'rootpassword',
+  server: 'localhost',
+  database: 'plants'
+}
+
+// Start server and listen at http://localhost:3001/
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -39,3 +50,22 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
+// // app 
+// app.listen(3001, () => console.log('listening at 3001'));
+// app.use(express.static('public'));
+// app.use(express.json({
+//   limit: '1mb'
+// }));
+// // POST
+// app.post('/api', (request, response) => {
+//   console.log('I got a request');
+//   console.log(request.body);
+//   const data = request.body;
+//   response.json({
+//     status: 'success',
+//     latitude: data.lat,
+//     longitude: data.lon
+//   });
+// });

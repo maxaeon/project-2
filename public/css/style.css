@@ -22,3 +22,113 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.bg-dark-green {
+  background: #202E1D;
+}
+
+.bg-midnight-green {
+  background: #100804;
+}
+
+.bg-light-green {
+  background: #B2CFAB;
+}
+
+.bg-sky-blue {
+  background: #B7DFF6;
+}
+
+.bg-lavender {
+  background: #B6A1CE;
+}
+
+.bg-off-white {
+  background: #F5F5F5;
+}
+
+.text-dark-green {
+  color: #202E1D;
+}
+
+.text-midnight-green {
+  color: #100804;
+}
+
+.text-light-green {
+  color: #B2CFAB;
+}
+
+.text-sky-blue {
+  color: #B7DFF6;
+}
+
+.text-off-white {
+  color: #F5F5F5;
+}
+
+.border-1 {
+  border-width: 1px;
+}
+.border-b-1 {
+  border-bottom-width: 1px;
+}
+
+#add-garden, #delete-garden, #prev-month, #next-month{
+  cursor: pointer;
+}
+
+.grid-rows-7 {
+  grid-template-rows: repeat(7, minmax(0, 1fr));
+}
+.grid-rows-8 {
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+}
+.grid-rows-9 {
+  grid-template-rows: repeat(9, minmax(0, 1fr));
+}
+.grid-rows-10 {
+  grid-template-rows: repeat(10, minmax(0, 1fr));
+}
+.grid-rows-11 {
+  grid-template-rows: repeat(11, minmax(0, 1fr));
+}
+.grid-rows-12 {
+  grid-template-rows: repeat(12, minmax(0, 1fr));
+}
+
+.row-start-8 {
+  grid-row-start: 8;
+}
+.row-start-9 {
+  grid-row-start: 9;
+}
+.row-start-10 {
+  grid-row-start: 10;
+}
+.row-start-11 {
+  grid-row-start: 11;
+}
+.row-start-12 {
+  grid-row-start: 12;
+}
+
+
+::-webkit-scrollbar {
+  width: 1vh;
+  height: 5vh;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B6A1CE;
+  border: 1px solid #100804;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
