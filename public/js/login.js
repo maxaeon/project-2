@@ -13,11 +13,11 @@ const registerCard = document.queryCommandIndeterm('#registerCard');
 
 // Event Listener
 navLoginLink.addEventListener('click', () => {
-  return loginCard.style.display = "none";
-  .then.
-
+  return registerCard.style.display = "none"
 });
+
 registerCard.addEventListener('click', () => {
+  return loginCard.style.display = "none";
 
 });
 
