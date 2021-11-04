@@ -1,9 +1,9 @@
 const sequelize = require('../config/connection');
-const { User, Garden } = require('../models');
+const { User, Garden,Plant } = require('../models');
 
 const userData = require('./userData.json');
 const gardenData = require('./gardenData.json');
-// const plantData = require('./plantData.json');
+const plantData = require('./plantData.json');
 // const animalData = require('./animalData.json');
 // const postData = require('./postData.json')
 
@@ -21,8 +21,8 @@ const seedDatabase = async () => {
   await Garden.bulkCreate(gardenData)
   console.log('\n----- GARDENS SYNCED -----\n')
   
-  // await Plant.bulkCreate(plantData)
-  // console.log('\n----- PLANTS SEEDED -----\n')
+  await Plant.bulkCreate(plantData)
+  console.log('\n----- PLANTS SEEDED -----\n')
 
   // await Animal.bulkCreate(animalData)
   // console.log('\n----- ANIMAL SEEDED -----\n')

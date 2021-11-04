@@ -17,12 +17,12 @@ const hbs = exphbs.create({
 });
 
 // Connection string parameters
-const sqlConfig = {
-  user: 'root',
-  password: 'rootpassword',
-  server: 'localhost',
-  database: 'plants'
-}
+// const sqlConfig = {
+//   user: 'root',
+//   password: 'rootpassword',
+//   server: 'localhost',
+//   database: 'plants'
+// }
 
 // Start server and listen at http://localhost:3001/
 const sess = {
