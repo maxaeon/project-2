@@ -1,7 +1,3 @@
-//Variables
-const hide = style.display = "none";
-const show = style.display = "";
-
 // Selectors
 // NavBar 
 const navLoginLink = document.querySelector('#loginWindow');
@@ -9,16 +5,23 @@ const navRegisterLink = document.querySelector('#registerWindow');
 
 // Cards
 const loginCard = document.querySelector('#loginCard');
-const registerCard = document.queryCommandIndeterm('#registerCard');
+const registerCard = document.querySelector('#registerCard');
 
 // Event Listener
 navLoginLink.addEventListener('click', () => {
-  return registerCard.style.display = "none"
+  if (registerCard.style.display === 'none') {
+    registerCard.style.display = 'block';
+  } else {
+    registerCard.style.display = 'none'
+  }
 });
 
-registerCard.addEventListener('click', () => {
-  return loginCard.style.display = "none";
-
+registerLink.addEventListener('click', () => {
+  if (loginCard.style.display === 'none') {
+    loginCard.style.display = 'block';
+  } else {
+    loginCard.style.display = 'none'
+  }
 });
 
 const loginFormHandler = async (event) => {
