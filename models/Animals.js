@@ -12,28 +12,43 @@ Garden.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+        animal_species: { 
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
+          allowNull: false,
+        }, 
+        breed: {      
+          type: DataTypes.STRING,
+               },
+        when_fertile: {       
+          type: DataTypes.STRING,
+                },
+        offspring_number: {
+          type: DataTypes.INTEGER,
+                 },
+        gestation: {       
+          type: DataTypes.STRING,
+                   },
+        when_to_sell_offspring: {        
+          type: DataTypes.STRING,
+                   },
+        habitat : {        
+          type: DataTypes.STRING,
+                   },
+        food: {        
+          type: DataTypes.STRING,
+                   },
+        stimulation: {        
+          type: DataTypes.STRING,
+                   },
+        adult_age: {        
+          type: DataTypes.STRING,
+                   },
+        adult_weight_lbs: {        
+          type: DataTypes.INTEGER,
+                   },
+        comments: {        
+          type: DataTypes.STRING,
+                   },
     },
   },
   {
