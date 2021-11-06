@@ -1,0 +1,15 @@
+<article class="post">
+      <div class="title">
+          {{!-- double curlies used for HTML attributes --}}
+        <h3>{{title}}</h3>
+        <span>{{post_content}}</span>
+      </div>
+      <div class="meta">
+          {{!-- double curlies used for content --}}
+        posted by {{user.username}} on
+        {{format_date createdAt}}
+        |
+        {{!-- word, amount --}}
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+      </div>
+    </article>

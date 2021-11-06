@@ -23,10 +23,10 @@ Animal.init(
       type: DataTypes.STRING,
     },
     offspring_number: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
     },
     gestation: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
     },
     when_to_sell_offspring: {
       type: DataTypes.STRING,

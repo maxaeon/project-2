@@ -1,80 +1,8 @@
-<div
-  class="min-h-screen justify-center items-center flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg">
-  <div
-    class="bg-midnight-green flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-off-white">
-    <div class="flex flex-col space-y-8 justify-between">
-      <div class="flex flex-col">
-        <h1 class="font-bold text-4xl tracking-wide">Chicken Run</h1>
-        <p class=" pt-2 text-light-green text-sm">This website application is designed for the
-          homesteader. Its purpose is intended to optimize a garden or farm.
-        </p>
-      </div>
-      <div class="flex flex-col text-light-green items-end">
-        <ul class="space-y-4 gap-6 text-sky-blue">
-          <li class="ml-2 text-md">Length of the Grow Cycle</li>
-          <li class="ml-2 text=md">Optimal plotting patterns</li>
-          <li class=""></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<section class="mt-3">
-  <!-- Contact Cards -->
-  <div class="flex w-full min-h-screen justify-center items-center">
-    <div
-      class="bg-dark-green flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-off-white">
-      <div class="flex flex-col space-y-8 justify-between">
-        <div>
-          <h1 class="font-bold text-4xl tracking-wide">Contact Us!</h1>
-          <p class=" pt-2 text-sky-blue text-sm">Lorem ipsum dolor sit amet
-            consectetur,
-            adipisicing
-            elit.
-            Corporis provident necessitatibus
-            aliquid ad nostrum reprehenderit eos minima praesentium, asperiores
-            culpa?
-          </p>
-        </div>
-        <div class="flex flex-col space-y-6">
-          <div class="inline-flex space-x-2 items-center">
-            <ion-icon name="logo-github" class="text-sky-blue text-xl"></ion-icon>
-            <a href="https://github.com/maxaeon/project-2">Github</a>
-          </div>
-          <div class="inline-flex space-x-2 items-center">
-            <ion-icon name="mail-outline" class="text-sky-blue text-xl"></ion-icon>
-            <a href="tevisreilly1@gmail.com">GMail</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="bg-off-white rounded-xl shadow-lg p-8 text-gray-600 md:w-80">
-          <form action="" class="flex flex-col space-y-4">
-            <div>
-              <label for="for="" class=" text-midnight-green text-sm">Your
-                name</label>
-              <input id="nameContact" type="text" placeholder="Your name"
-                class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
-            </div>
-            <div>
-              <label for="for="" class=" text-midnight-green text-sm">Email
-                Address</label>
-              <input id="emailContact" type="text" placeholder="Email Address"
-                class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
-            </div>
-            <div>
-              <label for="" class="text-midnight-green text-sm">Message</label>
-              <textarea id="messageContent" type="text" placeholder="Message" rows="4"
-                class="ring-1 ring-gray-300 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
-                                                    </textarea>
-            </div>
-            <button id="contactUsSubmit"
-              class="inline-block self-end bg-midnight-green font-bold rounded-lg px-6 py-2 uppercase text-sm text-sky-blue">
-              Send Message</button>
-          </form>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+<ol class="post-list">
+    {{!-- any HTML between #each repeated for every item in posts --}}
+    {{#each posts as |post|}}
+  <li>
+{{> post-info post}}
+  </li>
+  {{/each}}
+</ol>
