@@ -1,13 +1,10 @@
-<<<<<<< HEAD
+
 const User = require('./User');
 const Garden = require('./Garden');
 const Plant = require('./Plant');
-=======
-// import all models
 const Post = require("./Post");
 const User = require("./User");
 const Comment = require("./Comment");
->>>>>>> main
 
 // create associations
 // One to many relationship
@@ -21,7 +18,6 @@ Post.belongsTo(User, {
     onDelete: "SET NULL"
 });
 
-<<<<<<< HEAD
 Garden.hasMany(Plant, {
   foreignKey: 'garden_id'
 });
@@ -29,9 +25,6 @@ Garden.hasMany(Plant, {
 Plant.belongsTo(Garden,{
   foreignKey: 'garden_id'
 })
-
-module.exports = { User, Garden,Plant };
-=======
 // we don't have to specify comment as a through table
 // we don't need to access Post through Comment
 Comment.belongsTo(User, {
@@ -54,4 +47,4 @@ Post.hasMany(Comment, {
 });
 
 module.exports = { User, Post, Comment };
->>>>>>> main
+
