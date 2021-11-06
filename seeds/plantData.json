@@ -1,28 +1,9 @@
 [
-    {
-        "plant": "",
-        "annual": "",
-        "perennial": "",
-        "sewnDate": "",
-        "plantCondtions": "",
-        "sun": "",
-        "shade": "",
-        "depth": "",
-        "groups": "",
-        "rows": "",
-        "single": "",
-        "individual_seed_sprout_spacing": "",
-        "spacing_between_rows_groups": "",
-        "days_to_germination_min": "",
-        "days_to_germination_max": "",
-        "days_to_maturity_min": "",
-        "days_to_maturity_max": ""
-    },
+
     {
         "plant": "onions",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "when soil warms",
         "sun": "sun",
         "shade": "",
@@ -35,13 +16,13 @@
         "days_to_germination_min": "10",
         "days_to_germination_max": "15",
         "days_to_maturity_min": "60",
-        "days_to_maturity_max": "115"
+        "days_to_maturity_max": "115",
+        "garden_id": 1
     },
     {
         "plant": "lettuce",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "when soil warms, and every 2 weeks until early summer",
         "sun": "sun",
         "shade": "",
@@ -54,13 +35,13 @@
         "days_to_germination_min": "7",
         "days_to_germination_max": "10",
         "days_to_maturity_min": "40",
-        "days_to_maturity_max": "90"
+        "days_to_maturity_max": "90",
+        "garden_id": 1
     },
     {
         "plant": "cabbage",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "plant thrives in cool weather",
         "sun": "sun",
         "shade": "",
@@ -73,13 +54,13 @@
         "days_to_germination_min": "5",
         "days_to_germination_max": "14",
         "days_to_maturity_min": "60",
-        "days_to_maturity_max": "100"
+        "days_to_maturity_max": "100",
+        "garden_id": 1
     },
     {
         "plant": "tomatoes",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "start indoors, move outdoors after danger of last frost has passed",
         "sun": "sun",
         "shade": "",
@@ -92,13 +73,13 @@
         "days_to_germination_min": "7",
         "days_to_germination_max": "10",
         "days_to_maturity_min": "110",
-        "days_to_maturity_max": "120"
+        "days_to_maturity_max": "120",
+        "garden_id": 1
     },
     {
         "plant": "zucchini",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "start indoors, plant outdoors when night temperatures don't fall below 50 degrees F",
         "sun": "sun",
         "shade": "",
@@ -111,13 +92,13 @@
         "days_to_germination_min": "7",
         "days_to_germination_max": "10",
         "days_to_maturity_min": "42",
-        "days_to_maturity_max": "65"
+        "days_to_maturity_max": "65",
+        "garden_id": 1
     },
     {
         "plant": "peppers",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "start indoors, plant outdoors after danger of last frost has passed",
         "sun": "sun",
         "shade": "",
@@ -130,13 +111,13 @@
         "days_to_germination_min": "10",
         "days_to_germination_max": "12",
         "days_to_maturity_min": "55",
-        "days_to_maturity_max": "80"
+        "days_to_maturity_max": "80",
+        "garden_id": 1
     },
     {
         "plant": "beans",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "late spring to midsummer, after soil warms",
         "sun": "sun",
         "shade": "",
@@ -149,13 +130,13 @@
         "days_to_germination_min": "8",
         "days_to_germination_max": "16",
         "days_to_maturity_min": "50",
-        "days_to_maturity_max": "65"
+        "days_to_maturity_max": "65",
+        "garden_id": 1
     },
     {
         "plant": "pumpkin",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "start indoors, plant outdoors when night temperatures don't fall below 50 degrees F",
         "sun": "sun",
         "shade": "",
@@ -168,13 +149,13 @@
         "days_to_germination_min": "7",
         "days_to_germination_max": "10",
         "days_to_maturity_min": "",
-        "days_to_maturity_max": ""
+        "days_to_maturity_max": "",
+        "garden_id": 1
     },
     {
         "plant": "broccoli",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "start indoors, plant outdoors when night temperatures don't fall below 50 degrees F",
         "sun": "sun",
         "shade": "",
@@ -187,13 +168,13 @@
         "days_to_germination_min": "10",
         "days_to_germination_max": "14",
         "days_to_maturity_min": "20",
-        "days_to_maturity_max": "72"
+        "days_to_maturity_max": "72",
+        "garden_id": 1
     },
     {
         "plant": "Brussels sprouts",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "when soil warms",
         "sun": "sun",
         "shade": "",
@@ -206,13 +187,13 @@
         "days_to_germination_min": "7",
         "days_to_germination_max": "14",
         "days_to_maturity_min": "90",
-        "days_to_maturity_max": "120"
+        "days_to_maturity_max": "120",
+        "garden_id": 1
     },
     {
         "plant": "cauliflower",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "start indoors, plant outdoors when night temperatures don't fall below 50 degrees F",
         "sun": "",
         "shade": "",
@@ -225,13 +206,13 @@
         "days_to_germination_min": "10",
         "days_to_germination_max": "21",
         "days_to_maturity_min": "50",
-        "days_to_maturity_max": "72"
+        "days_to_maturity_max": "72",
+        "garden_id": 1
     },
     {
         "plant": "corn",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "when soil warms, and every 3 weeks until early summer",
         "sun": "sun",
         "shade": "",
@@ -244,13 +225,13 @@
         "days_to_germination_min": "5",
         "days_to_germination_max": "10",
         "days_to_maturity_min": "75",
-        "days_to_maturity_max": "80"
+        "days_to_maturity_max": "80",
+        "garden_id": 1
     },
     {
         "plant": "cucumber",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "after soil has warmed",
         "sun": "full sun",
         "shade": "",
@@ -263,13 +244,14 @@
         "days_to_germination_min": "7",
         "days_to_germination_max": "14",
         "days_to_maturity_min": "53",
-        "days_to_maturity_max": "60"
+        "days_to_maturity_max": "60",
+        "garden_id": 1
     },
     {
         "plant": "asparagus",
         "annual": "",
         "perennial": "perennial",
-        "sewnDate": "01-01-01",
+        "sewnDate": "01-01-",
         "plantCondtions": "when soil temperature is 70-75 degrees F",
         "sun": "full sun",
         "shade": "partial shade",
@@ -282,13 +264,13 @@
         "days_to_germination_min": "10",
         "days_to_germination_max": "12",
         "days_to_maturity_min": "730",
-        "days_to_maturity_max": "730"
+        "days_to_maturity_max": "730",
+        "garden_id": 1
     },
     {
         "plant": "eggplant",
         "annual": "annual",
         "perennial": "",
-        "sewnDate": "01-01-01",
         "plantCondtions": "after soil has warmed",
         "sun": "full sun",
         "shade": "",
@@ -301,6 +283,7 @@
         "days_to_germination_min": "7",
         "days_to_germination_max": "14",
         "days_to_maturity_min": "83",
-        "days_to_maturity_max": "83"
+        "days_to_maturity_max": "83",
+        "garden_id": 1
     }
 ]

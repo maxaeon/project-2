@@ -3,9 +3,7 @@ const sequelize = require('../config/connection');
 
 class Plant extends Model {}
 
-
 Plant.init(
-
   {
     id: {
       type: DataTypes.INTEGER,
@@ -81,32 +79,25 @@ Plant.init(
     },
 
     days_to_germination_min: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: true,
     },
 
     days_to_germination_max: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: true,
     },
 
     days_to_maturity_min: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: true,
     },
 
     days_to_maturity_max: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: true,
     },
-    user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
-        },
-      },
-      garden_id: {
+    garden_id: {
         type: DataTypes.INTEGER,
         references: {
           model: 'garden',

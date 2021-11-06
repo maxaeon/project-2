@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Plant,User } = require('../../models');
+const { Plant,User, Garden } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
 
@@ -18,11 +18,10 @@ router.post('/', async (req, res) => {
 // GET all Plants
 router.get('/', async (req, res) => {
   try {
-    const plantsData = await Plant.findAll({
-      ...req.body,
-    });
+    const plantsData = await Plant.findAll();
     res.status(200).json(plantsData);
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
@@ -35,7 +34,7 @@ router.get('/:id', async (req, res) => {
       {
         include: [
           {
-            model:User,
+            model:Garden,
            
           }
         ]
@@ -47,6 +46,7 @@ router.get('/:id', async (req, res) => {
     }
     res.status(200).json(plantData);
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });

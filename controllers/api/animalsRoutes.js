@@ -18,9 +18,7 @@ router.post('/', async (req, res) => {
 // GET all Animals
 router.get('/', async (req, res) => {
   try {
-    const animalsData = await Animals.findAll({
-      ...req.body,
-    });
+    const animalsData = await Animals.findAll();
     res.status(200).json(animalData);
   } catch (err) {
     res.status(500).json(err);
