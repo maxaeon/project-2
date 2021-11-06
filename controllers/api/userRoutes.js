@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Garden , Plant,} = require('../../models');
+
 
 router.post('/', async (req, res) => {
   try {
@@ -49,6 +50,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
+  console.log(req.session)
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
@@ -57,5 +59,54 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+// GET all Users
+router.get('/', async (req, res) => {
+  try {
+    let userData = await User.findAll(
+      {
+        include: [
+          {
+            model:Garden,
+            model:Plant
+
+          }
+        ]
+      }
+    );
+    if (!userData) {
+      res.status(404).json({ message: 'No User found with this id!' });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/:id', async (req, res) => {
+  try {
+    let userData = await User.findByPk(
+      req.params.id,
+      {
+        include: [
+          {
+            model:Garden,
+            model:Plant
+
+          }
+        ]
+      }
+    );
+    if (!userData) {
+      res.status(404).json({ message: 'No User found with this id!' });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;

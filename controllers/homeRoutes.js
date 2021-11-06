@@ -4,21 +4,8 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const gardenData = await Garden.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const gardens = gardenData.map((garden) => garden.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      gardens, 
+    // Pass session flag into template
+    res.render('homepage', {
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -48,29 +35,29 @@ router.get('/garden/:id', async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
-  try {
-    const plantData = await Plant.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+// router.get('/', async (req, res) => {
+//   try {
+//     const plantData = await Plant.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
 
-    // Serialize data so the template can read it
-    const plants = plantData.map((plants) => plants.get({ plain: true }));
+//     // Serialize data so the template can read it
+//     const plants = plantData.map((plants) => plants.get({ plain: true }));
 
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      plants, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     // Pass serialized data and session flag into template
+//     res.render('homepage', { 
+//       plants, 
+//       logged_in: req.session.logged_in 
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/plants/:id', async (req, res) => {
   try {
@@ -83,7 +70,7 @@ router.get('/plants/:id', async (req, res) => {
       ],
     });
 
-    const plant = plaData.get({ plain: true });
+    const plant = plantData.get({ plain: true });
 
     res.render('plant', {
       ...plant,
@@ -93,6 +80,10 @@ router.get('/plants/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/calendar', async (req, res) => {
+  res.render('calendar')
+})
 
 
 // Use withAuth middleware to prevent access to route
@@ -105,10 +96,10 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
-    res.render('profile', {
+    console.log(user)
+    res.render('dashboard', {
       ...user,
-      logged_in: true
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -123,6 +114,15 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('signup');
 });
 
 module.exports = router;

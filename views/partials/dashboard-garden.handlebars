@@ -1,5 +1,6 @@
-<div class="w-full lg:w-1/4 min-w-min border-1 border-black border-solid rounded my-3 text-left">
-    <div class="text-lg font-bold rounded-t p-3 border-b-2 border-black bg-off-white">
+<section
+    class="w-full lg:w-1/2 border-1 border-black border-solid rounded-xl m-3 text-left">
+    <div class="text-lg font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white">
         <div class="flex flex-row justify-between">
             <p>Gardens</p>
             <span class="self-center" id="add-garden">
@@ -11,16 +12,20 @@
         </div>
     </div>
     <ul class="flex justify-between flex-wrap">
-        <li class="w-full border-b-1 mb-2 flex justify-between p-3">
-            <p>Backyard </p>
+
+        <!-- User's gardens -->
+        {{#each gardens as |garden|}}
+        <li class="w-full border-b-1 flex justify-between mb-3 p-3">
+            <p> {{ garden.name }} </p>
             <span class="self-center" id="delete-garden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="red">
                     <path fill-rule="evenodd"
                         d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
                         clip-rule="evenodd" />
-                </svg></span>
+                </svg>
+            </span>
         </li>
-
+        {{/each}}
+        
     </ul>
-
-</div>
+</section>

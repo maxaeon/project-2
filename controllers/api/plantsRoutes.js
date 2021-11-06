@@ -1,61 +1,67 @@
 const router = require('express').Router();
-const { Plant } = require('../../models');
-const withAuth = require('../../utils/auth');
+const { Plant,User } = require('../../models');
+// const withAuth = require('../../utils/auth');
+
+
+// CREATE a Plant
+router.post('/', async (req, res) => {
+  try {
+    const newPlant = await Plant.create({
+      ...req.body,
+    })
+    res.status(200).json(newPlant);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 // GET all Plants
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const plantData = await Plant.findAll({
+    const plantsData = await Plant.findAll({
       ...req.body,
-      user_id: req.session.user_id,
     });
-    res.status(200).json(plantData);
+    res.status(200).json(plantsData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // GET a single Plant
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
-    const plantData = await Plant.findByPk({
-      where: {
-        id: req.params.id
+    const plantData = await Plant.findByPk(
+      req.params.id, 
+      {
+        include: [
+          {
+            model:User,
+           
+          }
+        ]
       }
-    })
-
+    );
     if (!plantData) {
-      res.status(404).json({ message: 'No location found with this id!' });
+      res.status(404).json({ message: 'Sorry about that, no records found for this user.' });
       return;
     }
-
     res.status(200).json(plantData);
   } catch (err) {
     res.status(500).json(err);
-  }
-});
-
-// CREATE a Plant
-router.post('/', withAuth, async (req, res) => {
-  try {
-    const newPlant = await Plant.create(req.body);
-    res.status(200).json(plantData);
-  } catch (err) {
-    res.status(400).json(err);
   }
 });
 
 // DELETE a Plant
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const plantData = await Plant.destroy({
       where: {
-        id: req.params.id
+        id: req.params.id,
       }
     });
 
     if (!plantData) {
-      res.status(404).json({ message: 'No plants found with this id!' });
+      res.status(404).json({ message: 'Sorry about that, no records found for this User' });
       return;
     }
 
@@ -64,5 +70,4 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 module.exports = router;
