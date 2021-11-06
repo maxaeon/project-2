@@ -81,6 +81,10 @@ router.get('/plants/:id', async (req, res) => {
   }
 });
 
+router.get('/calendar', async (req, res) => {
+  res.render('calendar')
+})
+
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
@@ -92,7 +96,7 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
+    console.log(user)
     res.render('dashboard', {
       ...user,
       logged_in: req.session.logged_in
