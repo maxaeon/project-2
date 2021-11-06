@@ -132,3 +132,10 @@ header, .project:not(:last-child) {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+section h4 {
+  height: 3.5rem;
+}
+section {
+  height: min-content;
+}

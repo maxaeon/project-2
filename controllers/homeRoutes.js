@@ -81,9 +81,6 @@ router.get('/plants/:id', async (req, res) => {
   }
 });
 
-router.get('/calendar', async (req, res) => {
-  res.render('calendar')
-})
 
 
 // Use withAuth middleware to prevent access to route

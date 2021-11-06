@@ -67,8 +67,7 @@ router.get('/', async (req, res) => {
       {
         include: [
           {
-            model:Garden,
-            model:Plant
+            model:Garden
 
           }
         ]

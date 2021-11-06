@@ -1,10 +1,10 @@
 <section
-    class="w-full lg:w-2/5 border-1 border-black border-solid rounded-xl m-3">
+    class="w-full lg:w-3/5 border-1 border-black border-solid rounded-xl m-3">
     <div class="text-lg font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white text-left">
         <p>Weather</p>
     </div>
     {{#if zone}}
-    <div class="grid grid-cols-6 grid-rows-6">
+    <div class="flex flex-row flex-wrap">
         <div class="col-span-full row-start-1 row-end-4 bg-sky-blue border-b-1 border-black">
 
         </div>
@@ -14,7 +14,7 @@
     </div>
     {{else}}
 
-    <div class="grid grid-cols-6 grid-rows-6 h-full">
+    <div class="flex flex-row flex-wrap">
         <div class="col-span-full row-start-2 row-span-3">
             <a href="#" class="m-5">Set your zone here!</a>
             
