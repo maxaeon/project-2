@@ -1,52 +1,50 @@
 const router = require('express').Router();
-const { Plant,User, Garden } = require('../../models');
+const { Animals,User } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
 
-// CREATE a Plant
+// CREATE a Animal
 router.post('/', async (req, res) => {
   try {
-    const newPlant = await Plant.create({
+    const newAnimals = await Animals.create({
       ...req.body,
     })
-    res.status(200).json(newPlant);
+    res.status(200).json(newAnimals);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-// GET all Plants
+// GET all Animals
 router.get('/', async (req, res) => {
   try {
-    const plantsData = await Plant.findAll();
-    res.status(200).json(plantsData);
+    const animalsData = await Animals.findAll();
+    res.status(200).json(animalData);
   } catch (err) {
-    console.log(err)
     res.status(500).json(err);
   }
 });
 
-// GET a single Plant
+// GET a single animal
 router.get('/:id', async (req, res) => {
   try {
-    const plantData = await Plant.findByPk(
+    const animalData = await Animals.findByPk(
       req.params.id, 
       {
         include: [
           {
-            model:Garden,
+            model:User,
            
           }
         ]
       }
     );
-    if (!plantData) {
+    if (!animalData) {
       res.status(404).json({ message: 'Sorry about that, no records found for this user.' });
       return;
     }
-    res.status(200).json(plantData);
+    res.status(200).json(animalData);
   } catch (err) {
-    console.log(err)
     res.status(500).json(err);
   }
 });
@@ -54,18 +52,18 @@ router.get('/:id', async (req, res) => {
 // DELETE a Plant
 router.delete('/:id', async (req, res) => {
   try {
-    const plantData = await Plant.destroy({
+    const animalData = await Animals.destroy({
       where: {
         id: req.params.id,
       }
     });
 
-    if (!plantData) {
+    if (!animalData) {
       res.status(404).json({ message: 'Sorry about that, no records found for this User' });
       return;
     }
 
-    res.status(200).json(plantData);
+    res.status(200).json(animalData);
   } catch (err) {
     res.status(500).json(err);
   }

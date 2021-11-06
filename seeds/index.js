@@ -24,8 +24,8 @@ const seedDatabase = async () => {
   await Plant.bulkCreate(plantData)
   console.log('\n----- PLANTS SEEDED -----\n')
 
-  // await Animal.bulkCreate(animalData)
-  // console.log('\n----- ANIMAL SEEDED -----\n')
+  await Animal.bulkCreate(animalData)
+  console.log('\n----- ANIMAL SEEDED -----\n')
 
   // await Post.bulkCreate(postData)
   // console.log('\n----- POST SEEDED -----\n')

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="comments">
     {{!-- instead of post.comments, use this --}}
     {{!-- loop over this, expresssions within loop look for properties on each obj in this (each comment) --}}
@@ -12,4 +13,20 @@
     </div>
   </section>
   {{/each}}
+=======
+<div class="comments">
+    {{!-- instead of post.comments, use this --}}
+    {{!-- loop over this, expresssions within loop look for properties on each obj in this (each comment) --}}
+  {{#each this}}
+  <section class="comment">
+    <div class="meta">
+        {{!-- use helper --}}
+      {{user.username}} on {{format_date created_at}}
+    </div>
+    <div class="text">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+>>>>>>> main
 </div>

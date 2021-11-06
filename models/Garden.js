@@ -30,7 +30,11 @@ Garden.init(
         model: 'user',
         key: 'id',
       },
+<<<<<<< HEAD
+    },
+=======
     }
+>>>>>>> main
   },
   {
     sequelize,

@@ -1,4 +1,26 @@
 const router = require('express').Router();
+<<<<<<< HEAD
+const { Garden, User, Plant} = require('../models');
+// const withAuth = require('../utils/auth');
+
+router.get('/', async (req, res) => {
+  try {
+    const gardenData = await Garden.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const garden = gardenData.map((garden) => garden.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('dashboard', { 
+      garden, 
+=======
 const { Garden, User, Plant } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -6,6 +28,7 @@ router.get('/', async (req, res) => {
   try {
     // Pass session flag into template
     res.render('homepage', {
+>>>>>>> main
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -35,6 +58,31 @@ router.get('/garden/:id', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
+router.get('/', async (req, res) => {
+  try {
+    const plantData = await Plant.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const plant = plantData.map((plant) => plant.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+      plant, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+=======
 // router.get('/', async (req, res) => {
 //   try {
 //     const plantData = await Plant.findAll({
@@ -58,8 +106,9 @@ router.get('/garden/:id', async (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
+>>>>>>> main
 
-router.get('/plants/:id', async (req, res) => {
+router.get('/plant/:id', async (req, res) => {
   try {
     const plantData = await Plant.findByPk(req.params.id, {
       include: [
@@ -86,8 +135,54 @@ router.get('/calendar', async (req, res) => {
 })
 
 
+// router.get('/', async (req, res) => {
+//   try {
+//     const animalData = await Animals.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
+
+//     // Serialize data so the template can read it
+//     const animals = animalData.map((garden) => animals.get({ plain: true }));
+
+//     // Pass serialized data and session flag into template
+//     res.render('dashboard', { 
+//       animals, 
+//       logged_in: req.session.logged_in 
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+// router.get('/animal/:id', async (req, res) => {
+//   try {
+//     const gardenData = await Garden.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
+
+//     const animal =animalData.get({ plain: true });
+
+//     res.render('animal', {
+//       ...animal,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {

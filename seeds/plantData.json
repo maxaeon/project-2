@@ -1,4 +1,7 @@
 [
+<<<<<<< HEAD
+
+=======
     {
         "plant": "",
         "annual": "",
@@ -18,11 +21,15 @@
         "days_to_maturity_min": null,
         "days_to_maturity_max": null
     },
+>>>>>>> main
     {
         "plant": "onions",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "when soil warms",
         "sun": "sun",
         "shade": "",
@@ -32,16 +39,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "12 inches",
         "spacing_between_rows_groups": "",
+<<<<<<< HEAD
+        "days_to_germination_min": "10",
+        "days_to_germination_max": "15",
+        "days_to_maturity_min": "60",
+        "days_to_maturity_max": "115",
+        "garden_id": 1
+=======
         "days_to_germination_min": 10,
         "days_to_germination_max": 15,
         "days_to_maturity_min": 60,
         "days_to_maturity_max": 115
+>>>>>>> main
     },
     {
         "plant": "lettuce",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "when soil warms, and every 2 weeks until early summer",
         "sun": "sun",
         "shade": "",
@@ -51,16 +69,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "12 inches",
         "spacing_between_rows_groups": "",
+<<<<<<< HEAD
+        "days_to_germination_min": "7",
+        "days_to_germination_max": "10",
+        "days_to_maturity_min": "40",
+        "days_to_maturity_max": "90",
+        "garden_id": 1
+=======
         "days_to_germination_min": 7,
         "days_to_germination_max": 10,
         "days_to_maturity_min": 40,
         "days_to_maturity_max": 90
+>>>>>>> main
     },
     {
         "plant": "cabbage",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "plant thrives in cool weather",
         "sun": "sun",
         "shade": "",
@@ -70,16 +99,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "space seeds 4 inches apart, thin to 18-24 inches",
         "spacing_between_rows_groups": "24-36 inches",
+<<<<<<< HEAD
+        "days_to_germination_min": "5",
+        "days_to_germination_max": "14",
+        "days_to_maturity_min": "60",
+        "days_to_maturity_max": "100",
+        "garden_id": 1
+=======
         "days_to_germination_min": 5,
         "days_to_germination_max": 14,
         "days_to_maturity_min": 60,
         "days_to_maturity_max": 100
+>>>>>>> main
     },
     {
         "plant": "tomatoes",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "start indoors, move outdoors after danger of last frost has passed",
         "sun": "sun",
         "shade": "",
@@ -89,16 +129,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "18-24 inches",
         "spacing_between_rows_groups": "",
+<<<<<<< HEAD
+        "days_to_germination_min": "7",
+        "days_to_germination_max": "10",
+        "days_to_maturity_min": "110",
+        "days_to_maturity_max": "120",
+        "garden_id": 1
+=======
         "days_to_germination_min": 7,
         "days_to_germination_max": 10,
         "days_to_maturity_min": 110,
         "days_to_maturity_max": 120
+>>>>>>> main
     },
     {
         "plant": "zucchini",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "start indoors, plant outdoors when night temperatures don't fall below 50 degrees F",
         "sun": "sun",
         "shade": "",
@@ -108,16 +159,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "2 established plants per group/hill",
         "spacing_between_rows_groups": "18 inches",
+<<<<<<< HEAD
+        "days_to_germination_min": "7",
+        "days_to_germination_max": "10",
+        "days_to_maturity_min": "42",
+        "days_to_maturity_max": "65",
+        "garden_id": 1
+=======
         "days_to_germination_min": 7,
         "days_to_germination_max": 10,
         "days_to_maturity_min": 42,
         "days_to_maturity_max": 65
+>>>>>>> main
     },
     {
         "plant": "peppers",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "start indoors, plant outdoors after danger of last frost has passed",
         "sun": "sun",
         "shade": "",
@@ -127,16 +189,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "18-24 inches",
         "spacing_between_rows_groups": "",
+<<<<<<< HEAD
+        "days_to_germination_min": "10",
+        "days_to_germination_max": "12",
+        "days_to_maturity_min": "55",
+        "days_to_maturity_max": "80",
+        "garden_id": 1
+=======
         "days_to_germination_min": 10,
         "days_to_germination_max": 12,
         "days_to_maturity_min": 55,
         "days_to_maturity_max": 80
+>>>>>>> main
     },
     {
         "plant": "beans",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "late spring to midsummer, after soil warms",
         "sun": "sun",
         "shade": "",
@@ -146,16 +219,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "5 inches",
         "spacing_between_rows_groups": "24 inches",
+<<<<<<< HEAD
+        "days_to_germination_min": "8",
+        "days_to_germination_max": "16",
+        "days_to_maturity_min": "50",
+        "days_to_maturity_max": "65",
+        "garden_id": 1
+=======
         "days_to_germination_min": 8,
         "days_to_germination_max": 16,
         "days_to_maturity_min": 50,
         "days_to_maturity_max": 65
+>>>>>>> main
     },
     {
         "plant": "pumpkin",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "start indoors, plant outdoors when night temperatures don't fall below 50 degrees F",
         "sun": "sun",
         "shade": "",
@@ -165,16 +249,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "at most 2 established plants per group/hill",
         "spacing_between_rows_groups": "at least 18 inches",
+<<<<<<< HEAD
+        "days_to_germination_min": "7",
+        "days_to_germination_max": "10",
+        "days_to_maturity_min": "",
+        "days_to_maturity_max": "",
+        "garden_id": 1
+=======
         "days_to_germination_min": 7,
         "days_to_germination_max": 10,
         "days_to_maturity_min": null,
         "days_to_maturity_max": null
+>>>>>>> main
     },
     {
         "plant": "broccoli",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "start indoors, plant outdoors when night temperatures don't fall below 50 degrees F",
         "sun": "sun",
         "shade": "",
@@ -184,16 +279,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "18-24 inches",
         "spacing_between_rows_groups": "",
+<<<<<<< HEAD
+        "days_to_germination_min": "10",
+        "days_to_germination_max": "14",
+        "days_to_maturity_min": "20",
+        "days_to_maturity_max": "72",
+        "garden_id": 1
+=======
         "days_to_germination_min": 10,
         "days_to_germination_max": 14,
         "days_to_maturity_min": 20,
         "days_to_maturity_max": 72
+>>>>>>> main
     },
     {
         "plant": "Brussels sprouts",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "when soil warms",
         "sun": "sun",
         "shade": "",
@@ -203,16 +309,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "18-24 inches",
         "spacing_between_rows_groups": "",
+<<<<<<< HEAD
+        "days_to_germination_min": "7",
+        "days_to_germination_max": "14",
+        "days_to_maturity_min": "90",
+        "days_to_maturity_max": "120",
+        "garden_id": 1
+=======
         "days_to_germination_min": 7,
         "days_to_germination_max": 14,
         "days_to_maturity_min": 90,
         "days_to_maturity_max": 120
+>>>>>>> main
     },
     {
         "plant": "cauliflower",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "start indoors, plant outdoors when night temperatures don't fall below 50 degrees F",
         "sun": "",
         "shade": "",
@@ -222,16 +339,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "18 inches",
         "spacing_between_rows_groups": "",
+<<<<<<< HEAD
+        "days_to_germination_min": "10",
+        "days_to_germination_max": "21",
+        "days_to_maturity_min": "50",
+        "days_to_maturity_max": "72",
+        "garden_id": 1
+=======
         "days_to_germination_min": 10,
         "days_to_germination_max": 21,
         "days_to_maturity_min": 50,
         "days_to_maturity_max": 72
+>>>>>>> main
     },
     {
         "plant": "corn",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "when soil warms, and every 3 weeks until early summer",
         "sun": "sun",
         "shade": "",
@@ -241,16 +369,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "8 inches",
         "spacing_between_rows_groups": "30-36 inches",
+<<<<<<< HEAD
+        "days_to_germination_min": "5",
+        "days_to_germination_max": "10",
+        "days_to_maturity_min": "75",
+        "days_to_maturity_max": "80",
+        "garden_id": 1
+=======
         "days_to_germination_min": 5,
         "days_to_germination_max": 10,
         "days_to_maturity_min": 75,
         "days_to_maturity_max": 80
+>>>>>>> main
     },
     {
         "plant": "cucumber",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "after soil has warmed",
         "sun": "full sun",
         "shade": "",
@@ -260,16 +399,28 @@
         "single": "",
         "individual_seed_sprout_spacing": "3 inches, apart, 6-8 per hill/group, thin to 3-4 plants per hill/group",
         "spacing_between_rows_groups": "4-5 feet",
+<<<<<<< HEAD
+        "days_to_germination_min": "7",
+        "days_to_germination_max": "14",
+        "days_to_maturity_min": "53",
+        "days_to_maturity_max": "60",
+        "garden_id": 1
+=======
         "days_to_germination_min": 7,
         "days_to_germination_max": 14,
         "days_to_maturity_min": 53,
         "days_to_maturity_max": 60
+>>>>>>> main
     },
     {
         "plant": "asparagus",
         "annual": "",
         "perennial": "perennial",
+<<<<<<< HEAD
+        "sewnDate": "01-01-",
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "when soil temperature is 70-75 degrees F",
         "sun": "full sun",
         "shade": "partial shade",
@@ -279,16 +430,27 @@
         "single": "",
         "individual_seed_sprout_spacing": "",
         "spacing_between_rows_groups": "",
+<<<<<<< HEAD
+        "days_to_germination_min": "10",
+        "days_to_germination_max": "12",
+        "days_to_maturity_min": "730",
+        "days_to_maturity_max": "730",
+        "garden_id": 1
+=======
         "days_to_germination_min": 10,
         "days_to_germination_max": 12,
         "days_to_maturity_min": 730,
         "days_to_maturity_max": 730
+>>>>>>> main
     },
     {
         "plant": "eggplant",
         "annual": "annual",
         "perennial": "",
+<<<<<<< HEAD
+=======
         "sewnDate": "2022-01-01",
+>>>>>>> main
         "plantCondtions": "after soil has warmed",
         "sun": "full sun",
         "shade": "",
@@ -298,9 +460,17 @@
         "single": "",
         "individual_seed_sprout_spacing": "plant seeds 0.5 inches apart, thin to 18-24 inches",
         "spacing_between_rows_groups": "24 inches",
+<<<<<<< HEAD
+        "days_to_germination_min": "7",
+        "days_to_germination_max": "14",
+        "days_to_maturity_min": "83",
+        "days_to_maturity_max": "83",
+        "garden_id": 1
+=======
         "days_to_germination_min": 7,
         "days_to_germination_max": 14,
         "days_to_maturity_min": 83,
         "days_to_maturity_max": 83
+>>>>>>> main
     }
 ]
