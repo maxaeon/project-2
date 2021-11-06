@@ -11,6 +11,19 @@
 //     console.log(`listening at http://localhost:3001}`)
 // });
 
+// Selectors
+const citySearch = document.querySelector('#cityWeatherSearch');
+const weatherBtn = document.querySelector('#weatherBtn');
+const weatherLink = document.querySelector('#weatherZone');
+
+
+// Function
+
+// Event Listener
+weatherBtn.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
+
 // console.log(match.route.view());
 const key = `2bef2ee04c8ade8180af5a90faf70ff9`;
 
