@@ -1,8 +1,20 @@
-<section class="block w-11/12 lg:w-3/4 m-auto my-4 text-center">
-    <h4 class="text-3xl p-2 bg-dark-green rounded-t-2xl text-off-white">
-        Dashboard
-    </h4>
-    <div class="border-solid border-1 border-gray-400 bg-light-green text-midnight-green rounded-b-2xl">
+<section class="block w-11/12 lg:w-3/4 my-4 lg:mr-5 text-center shadow-2xl">
+  <!-- Dashboard Title -->
+  <h4 class="text-3xl p-2 bg-dark-green rounded-t-xl text-off-white">
+    Dashboard
+  </h4>
 
+
+  <!-- Dashboard body -->
+  <div
+    class="border-solid border-1 border-black bg-light-green text-midnight-green rounded-b-xl flex flex-wrap min-h-full">
+    <div class="w-full flex flex-wrap justify-between">
+      {{> dashboard-garden}}
+      {{> dashboard-weather}}
     </div>
+    {{> pod}}
+    {{> aod}}
+    {{> dashboard-calendar}}
+
+  </div>
 </section>

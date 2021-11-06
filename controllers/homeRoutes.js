@@ -1,4 +1,5 @@
 const router = require('express').Router();
+<<<<<<< HEAD
 const { Garden, User, Plant} = require('../models');
 // const withAuth = require('../utils/auth');
 
@@ -19,6 +20,15 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('dashboard', { 
       garden, 
+=======
+const { Garden, User, Plant } = require('../models');
+const withAuth = require('../utils/auth');
+
+router.get('/', async (req, res) => {
+  try {
+    // Pass session flag into template
+    res.render('homepage', {
+>>>>>>> main
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -48,6 +58,7 @@ router.get('/garden/:id', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 router.get('/', async (req, res) => {
   try {
     const plantData = await Plant.findAll({
@@ -71,6 +82,31 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+=======
+// router.get('/', async (req, res) => {
+//   try {
+//     const plantData = await Plant.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
+
+//     // Serialize data so the template can read it
+//     const plants = plantData.map((plants) => plants.get({ plain: true }));
+
+//     // Pass serialized data and session flag into template
+//     res.render('homepage', { 
+//       plants, 
+//       logged_in: req.session.logged_in 
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+>>>>>>> main
 
 router.get('/plant/:id', async (req, res) => {
   try {
@@ -93,6 +129,10 @@ router.get('/plant/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/calendar', async (req, res) => {
+  res.render('calendar')
+})
 
 
 // router.get('/', async (req, res) => {
@@ -151,10 +191,10 @@ router.get('/profile', async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
-    res.render('profile', {
+    console.log(user)
+    res.render('dashboard', {
       ...user,
-      logged_in: true
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -169,6 +209,15 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('signup');
 });
 
 module.exports = router;

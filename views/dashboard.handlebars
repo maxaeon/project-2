@@ -1,21 +1,36 @@
+<div class="w-full"> Welcome, {{name}}
+</div>
+
 {{>dashboard-news}}
+{{>dashboard-main}}
+<section>
+  <h2>Create New Post</h2>
 
-
-<section class="block w-11/12 lg:w-3/4 my-4 lg:mr-5 text-center">
-  <!-- Dashboard Title -->
-  <h4 class="text-3xl p-2 bg-dark-green rounded-t text-off-white">
-    Dashboard
-  </h4>
-
-
-  <!-- Dashboard body -->
-  <div
-    class="border-solid border-1 border-gray-400 bg-light-green text-midnight-green rounded-b grid grid-cols-12 grid-rows-10 min-h-full">
-    {{> dashboard-garden}}
-    {{> dashboard-weather}}
-    {{> pod}}
-    {{> aod}}
-    {{> dashboard-calender}}
-
-  </div>
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-content">Content</label>
+      <input id="post-content" name="post-content" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
 </section>
+
+{{#if posts.length}}
+<section>
+    <h2>Your Posts</h2>
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>

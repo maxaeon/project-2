@@ -1,3 +1,4 @@
+<<<<<<< HEAD:models/Animals.js
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -80,3 +81,49 @@ Animals.init(
 );
 
 module.exports = Animals;
+=======
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
+class Livestock extends Model {}
+
+
+Livestock.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING,
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    livestock_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'livestock',
+        key: 'id',
+      },
+    }
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'livestock',
+  }
+);
+
+module.exports = Livestock;
+>>>>>>> main:models/Livestock.js

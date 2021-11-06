@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Plant extends Model {}
+class Plant extends Model { }
 
 Plant.init(
+<<<<<<< HEAD
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,73 +12,84 @@ Plant.init(
       primaryKey: true,
       autoIncrement: true,
     },
+=======
 
-    plant: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+>>>>>>> main
 
-    annual: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        plant: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    perennial: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        annual: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    sewnDate: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW,
-    },
+        perennial: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    plantCondtions: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        sewnDate: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+        },
 
-    sun: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        plantCondtions: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    shade: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        sun: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    depth: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        shade: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    groups: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        depth: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    rows: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        groups: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    single: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        rows: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    individual_seed_sprout_spacing: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        single: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
-    spacing_between_rows_groups: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+        individual_seed_sprout_spacing: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
 
+        spacing_between_rows_groups: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+
+<<<<<<< HEAD
     days_to_germination_min: {
         type: DataTypes.STRING,
         allowNull: true,
@@ -113,6 +125,44 @@ Plant.init(
     underscored: true,
     modelName: 'plant',
   }
+=======
+        days_to_maturation_min: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+
+        days_to_germination_max: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+
+        days_to_maturity_min: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+
+
+        days_to_maturity_max: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        garden_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'garden',
+                key: 'id',
+            },
+        },
+    },
+
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'plant',
+    }
+>>>>>>> main
 );
 
 module.exports = Plant;
