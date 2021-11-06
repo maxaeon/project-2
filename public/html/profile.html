@@ -127,15 +127,26 @@
                         </div>
 
                         <div class="grid grid-cols-6 grid-rows-6 h-full">
-                            <div class="col-span-full row-start-2 row-span-3">
-                                <a id="weatherZone" href="#" class="m-5">Set your zone here!</a>
+                            <div class="col-span-full row-start-2 row-span-3 mb-6 ">
                                 <label for="">City:</label>
                                 <input id="cityWeatherSearch" type="text" placeholder="Enter Name of City">
                                 <input id="weatherBtn" class="btn" type="submit" value="Submit">
                                 <!-- <button id="weatherBtn">Submit</button> -->
                             </div>
-                            <div>
+                            <div class="container">
                                 <!-- Weather feedback information -->
+                                <div class="temperature flex flex-row mt-2"> <!-- Temp -->
+                                    <label for="">Temperature</label>
+                                    <p><span id="tempInsert"></span>°F</p>
+                                </div>
+                                <div class="humidity flex flex-row"></div>
+                                    <label for="humidity">Humidity:</label>
+                                    <p><span id="humidityInsert"></span>%</p>
+                                </div>
+                                <div class="weatherStatus flex flex-row">
+                                    <label for="weather">Current weather:</label>
+                                    <span id="weatherStatus"></span>
+                                </div>
                             </div>
                         </div>
 
