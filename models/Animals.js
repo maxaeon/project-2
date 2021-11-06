@@ -1,10 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Garden extends Model {}
+class Animals extends Model {}
 
 
-Garden.init(
+Animals.init(
+
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,22 +13,55 @@ Garden.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    breed: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
-    description: {
+    animal_species: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+    when_fertile: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
+   average_number_of_offspring: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
+    gestation_period: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    length_of_time_before_offspring_can_be_sold: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    habitat_requirements: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    food_requirements: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    stimulation_requirements: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    adult_age: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    adult_weight_size: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    additional_comments: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -41,8 +75,8 @@ Garden.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'garden',
+    modelName: 'animals',
   }
 );
 
-module.exports = Garden;
+module.exports = Animals;
