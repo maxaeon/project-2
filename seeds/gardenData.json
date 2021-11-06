@@ -2,16 +2,26 @@
   {
     "name": "Front Yard Garden",
     "description": "A front yard vegetable garden with corn, tomatoes, and more.",
-    "savedContent": ""
+    "user_id": 1
   },
   {
     "name": "Orchard",
     "description": "fruit trees",
-    "savedContent": ""
+    "user_id": 2
   },
   {
     "name": "Livestock",
     "description": "ducks, bunnies, and doggos",
-    "savedContent": ""
+    "user_id": 3
+  },
+  {
+    "name": "Livestock",
+    "description": "ducks, bunnies, and doggos",
+    "user_id": 4
+  },
+  {
+    "name": "Livestock",
+    "description": "ducks, bunnies, and doggos",
+    "user_id": 4
   }
 ]

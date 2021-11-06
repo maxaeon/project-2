@@ -2,39 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Tech News</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calendar.css">
+  <title>Chicken Run</title>
 </head>
 
-<body>
-    <div class="wrapper">
-        <header>
-            <h1>
-                <a href="/">The Tech Blog</a>
-            </h1>
-            <nav>
-                {{#if loggedIn}}
-                <a href="/">Home</a>
-                <a href="/dashboard">dashboard</a>
-                <button id="logout" class="btn-no-style">logout</button>
-                {{else}}
-                <a href="/login">login</a>
-                {{/if}}
-            </nav>
-        </header>
-        <main>
-            {{!-- 2 curlies convert HTML into strings (< becomes &lt;) --}} {{!-- 3 curlies renders data as HTML --}}
-                {{{ body }}} </main>
-                <footer>
-                    © Jennifren 2021
-                </footer>
-    </div>
-
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-    {{/if}}
+<body class=" antialiased bg-light-green pb-5">
+  {{> navbar}}
+  <main class="flex flex-column justify-around lg:flex-row flex-wrap p-1 lg:p-3">
+    {{{body}}}
+  </main>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+  {{!--
+  <script src="../js/home.js"></script> --}}
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>

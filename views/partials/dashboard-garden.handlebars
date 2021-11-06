@@ -1,5 +1,5 @@
-<div
-    class="col-span-full md:col-span-5 lg:col-span-6 row-span-2 lg:row-span-2 min-h-min border-1 border-black border-solid rounded-xl m-3 text-left">
+<section
+    class="w-full lg:w-1/2 border-1 border-black border-solid rounded-xl m-3 text-left">
     <div class="text-lg font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white">
         <div class="flex flex-row justify-between">
             <p>Gardens</p>
@@ -14,8 +14,9 @@
     <ul class="flex justify-between flex-wrap">
 
         <!-- User's gardens -->
+        {{#each gardens as |garden|}}
         <li class="w-full border-b-1 flex justify-between mb-3 p-3">
-            <p>Backyard </p>
+            <p> {{ garden.name }} </p>
             <span class="self-center" id="delete-garden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="red">
                     <path fill-rule="evenodd"
@@ -24,6 +25,7 @@
                 </svg>
             </span>
         </li>
+        {{/each}}
         
     </ul>
-</div>
+</section>
