@@ -4,15 +4,6 @@ const sequelize = require('../config/connection');
 class Plant extends Model { }
 
 Plant.init(
-<<<<<<< HEAD
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-=======
 
     {
         id: {
@@ -21,7 +12,6 @@ Plant.init(
             primaryKey: true,
             autoIncrement: true,
         },
->>>>>>> main
 
         plant: {
             type: DataTypes.STRING,
@@ -89,43 +79,6 @@ Plant.init(
             allowNull: true,
         },
 
-<<<<<<< HEAD
-    days_to_germination_min: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-
-    days_to_germination_max: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-
-    days_to_maturity_min: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-
-    days_to_maturity_max: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    garden_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'garden',
-          key: 'id',
-        },
-      },
-  },
-
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'plant',
-  }
-=======
         days_to_maturation_min: {
             type: DataTypes.INTEGER,
             allowNull: true,
@@ -153,6 +106,13 @@ Plant.init(
                 key: 'id',
             },
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'user',
+              key: 'id',
+            },
+          }
     },
 
     {
@@ -162,7 +122,6 @@ Plant.init(
         underscored: true,
         modelName: 'plant',
     }
->>>>>>> main
 );
 
 module.exports = Plant;

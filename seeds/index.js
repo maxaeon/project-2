@@ -27,21 +27,8 @@ const seedDatabase = async () => {
   await Animal.bulkCreate(animalData)
   console.log('\n----- ANIMAL SEEDED -----\n')
 
-  // await Post.bulkCreate(postData)
-  // console.log('\n----- POST SEEDED -----\n')
-
-
-  // const users = await User.bulkCreate(userData, {
-  //   individualHooks: true,
-  //   returning: true,
-  // });
-
-  // for (const project of projectData) {
-  //   await Project.create({
-  //     ...project,
-  //     user_id: users[Math.floor(Math.random() * users.length)].id,
-  //   });
-  // }
+  await Post.bulkCreate(postData)
+  console.log('\n----- POST SEEDED -----\n')
 
   process.exit(0);
 };
