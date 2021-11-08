@@ -134,28 +134,29 @@ var cal = {
     console.log(cal.sMth)
     cal.data[cal.sDay] = document.getElementById("evt-details").value;
     localStorage.setItem("cal-" + cal.sMth + "-" + cal.sYear, JSON.stringify(cal.data));
+    cal.list()
     let data = {
       month: cal.mName[cal.sMth],
       events: cal.data
     }
     
-    const response = await fetch('/api/calendar', {
-      method: 'POST',
-      body: JSON.stringify({
-        data
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
+    // const response = await fetch('/api/calendar', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     data
+    //   }),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // })
 
-    if (response.ok) {
-      cal.list();
-      // console.log(response)
+    // if (response.ok) {
+    //   cal.list();
+    //   // console.log(response)
 
-    } else {
-      alert(response.statusText)
-    }
+    // } else {
+    //   alert(response.statusText)
+    // }
 
   },
 

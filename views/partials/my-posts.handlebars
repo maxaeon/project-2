@@ -1,0 +1,17 @@
+<section
+    class="block w-11/12 lg:w-1/5 max-h-56 lg:max-h-full overflow-y-scroll m-auto mx-2 my-4 text-center rounded-xl">
+    <h4 class="text-3xl p-2 bg-dark-green rounded-t-xl text-off-white">
+        My Posts
+    </h4>
+    <div class="border-solid border-1 border-gray-400 bg-light-green text-midnight-green rounded-b-xl flex flex-row flex-wrap">
+        {{#each posts as |post|}}
+        <div class="card">
+            <a href="/post/{{post.id}}">{{post.title}}</div>
+            <div>{{post.date_created}}</div>
+            <hr />
+
+        </div>
+        {{/each}}
+    <button id="" class="">Write New Post</button>
+    </div>
+</section>
