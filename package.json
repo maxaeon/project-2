@@ -1,4 +1,11 @@
 {
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "15-project-2",
+  "description": "The project will allow users to register for an account, access information about various plants and animals, add information to this database, as well as organize their farming activities in a calendar.",
+  "version": "1.0.0",
+  "main": "server.js",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
@@ -8,5 +15,17 @@
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxaeon/group-project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxaeon/group-project-2/issues"
+  },
+  "homepage": "https://github.com/maxaeon/group-project-2#readme"
 }

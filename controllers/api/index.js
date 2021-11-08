@@ -1,30 +1,29 @@
-<<<<<<< HEAD
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const gardenRoutes = require('./gardenRoutes');
 const plantsRoutes = require('./plantsRoutes')
-// const animalsRoutes = require('./animalsRoutes')
-=======
-const router = require("express").Router();
->>>>>>> main
+const animalsRoutes = require('./animalsRoutes')
+const postRoutes = require("./postRoutes");
+const commentRoutes = require("./commentRoutes");
+const calendarRoutes = require('./calendarRoutes')
 
-const userRoutes = require("./user-routes");
-const postRoutes = require("./post-routes");
-const commentRoutes = require("./comment-routes");
-
-<<<<<<< HEAD
-router.use('/users', userRoutes);
-router.use('/garden', gardenRoutes);
-router.use('/plants', plantsRoutes )
 // route.use('/animals',animalsRoutes)
-
-module.exports = router;
-=======
 // collect endpoints and prefix them
 // router instance uses these prefixes
+
+//  ./api/garden/gardenRoutes
+router.use('/garden', gardenRoutes);
+//  ./api/plants/plantsRoutes
+router.use('/plants', plantsRoutes )
+//  .api/users/userRoutes
 router.use("/users", userRoutes);
+//  .api/posts/postRoutes
 router.use("/posts", postRoutes);
+//  .api/comments/commentRoutes
 router.use("/comments", commentRoutes);
+//  .api/animals/animalsRoutes
+router.use("/animals", animalsRoutes);
+
+// router.use('/calendar', calendarRoutes)
 
 module.exports = router;
->>>>>>> main

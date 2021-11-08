@@ -1,21 +1,21 @@
 [
   {
-    "name": "Max",
+    "username": "Max",
     "email": "maparks@ucdavis.edu",
     "password": "password12345"
   },
   {
-    "name": "Tevis",
+    "username": "Tevis",
     "email": "tevis@gmail.com",
     "password": "password12345"
   },
   {
-    "name": "Travis",
+    "username": "Travis",
     "email": "travis@aol.com",
     "password": "password12345"
   },
   {
-    "name": "Adam",
+    "username": "Adam",
     "email": "adam@gmail.com",
     "password": "password12345"
   }
