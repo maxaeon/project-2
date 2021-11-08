@@ -74,7 +74,11 @@ header, .project:not(:last-child) {
   border-bottom-width: 1px;
 }
 
-#add-garden, #delete-garden, #prev-month, #next-month, #close-modal{
+#add-garden, #prev-month, #next-month, #close-modal{
+  cursor: pointer;
+}
+
+.delete-garden svg {
   cursor: pointer;
 }
 

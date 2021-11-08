@@ -5,21 +5,23 @@ const { Garden, User } = require("../../models");
 // CREATE a Garden
 router.post("/", async (req, res) => {
   try {
+    const { title, description } = req.body
     const newGarden = await Garden.create({
-      ...req.body,
+      title,
+      description,
+      user_id: req.session.user_id
     });
-    res.status(200).json(newGarden);
+    res.redirect('/profile');
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 
 // GET all Gardens
 router.get("/", async (req, res) => {
   try {
-    const gardensData = await Garden.findAll({
-      ...req.body,
-    });
+
+    const gardensData = await Garden.findAll();
     res.status(200).json(gardensData);
   } catch (err) {
     res.status(500).json(err);
@@ -65,8 +67,8 @@ router.delete("/:id", async (req, res) => {
 
       return;
     }
-
-    res.status(200).json(gardenData);
+    const allGardens = await Garden.findAll()
+    res.status(200).json(allGardens);
   } catch (err) {
     res.status(500).json(err);
   }
