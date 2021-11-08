@@ -1,25 +1,13 @@
 const router = require("express").Router();
 const { Garden, User, Plant, Post, Comment } = require("../models");
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
+const getRandItem = require('../utils/getRandItem');
 
 router.get("/", async (req, res) => {
   try {
-    const gardenData = await Garden.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const garden = gardenData.map((garden) => garden.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render("dashboard", {
-      garden,
-      logged_in: req.session.logged_in,
+    // Pass session flag into template
+    res.render('homepage', {
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -105,12 +93,19 @@ router.get("/profile", async (req, res) => {
       attributes: { exclude: ["password"] },
       include: [{ model: Garden }],
     });
+    const plantCount = await Plant.count()
+    const plantDatum = await Plant.findByPk(Math.floor(Math.random() * plantCount))
+    // console.log(allPlants)
+    // const randPlant = getRandItem(allPlants.dataValues)
+    const plant = plantDatum.get({ plain: true })
+    console.log(plant)
 
     const user = userData.get({ plain: true });
     console.log(user);
     res.render("dashboard", {
       ...user,
-      logged_in: req.session.logged_in,
+      plant,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);

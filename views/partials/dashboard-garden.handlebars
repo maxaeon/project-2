@@ -1,22 +1,20 @@
-<section
-    class="w-full lg:w-1/2 border-1 border-black border-solid rounded-xl m-3 text-left">
-    <div class="text-lg font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white">
-        <div class="flex flex-row justify-between">
-            <p>Gardens</p>
-            <span class="self-center" id="add-garden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </span>
-        </div>
-    </div>
+<section class="w-full lg:w-1/3 border-1 border-black border-solid rounded-xl m-3 text-left">
+    <h4 class="text-lg font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white flex flex-row justify-between">
+
+        <p>Gardens</p>
+        <span class="self-center" id="add-garden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+        </span>
+    </h4>
     <ul class="flex justify-between flex-wrap">
 
         <!-- User's gardens -->
         {{#each gardens as |garden|}}
         <li class="w-full border-b-1 flex justify-between mb-3 p-3">
-            <p> {{ garden.name }} </p>
+            <a href="/garden/{{garden.id}}"> {{ garden.name }} </a>
             <span class="self-center" id="delete-garden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="red">
                     <path fill-rule="evenodd"
@@ -26,6 +24,29 @@
             </span>
         </li>
         {{/each}}
-        
+
     </ul>
 </section>
+
+<div id="add-garden-modal" class="flex flex-row flex-wrap border-1 border-black border-solid rounded-xl bg-light-green w-1/4">
+    <h5 class="text-lg text-left font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white w-full flex flex-row justify-between">
+        <p>Add a garden</p>
+        <span class="self-center" id="close-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </span>
+    </h5>
+    <div class="w-full p-3">
+        <form class="flex flex-row flex-wrap">
+            <label for="garden-name" class="w-full text-left">Garden Name</label>
+            <input type="text" id="garden-name" name="garden-name" class="ring-1 font-semibold ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300 mb-3" />
+            <label for="description" class="w-full text-left">Description</label>
+            <input type="textarea" name="description" id="garden-description" placeholder="Small description of the garden" class="ring-1 font-semibold ring-gray-600 w-full rounded-md my-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300" />
+            <button id="create-garden" type="submit" class="justify-self-end bg-midnight-green font-bold rounded-lg px-6 py-2 my-3 uppercase text-sm text-sky-blue">Create Garden</button>
+        </form>
+    </div>
+</div>
+
+<script src="/js/add-garden.js"></script>
