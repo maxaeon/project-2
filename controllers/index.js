@@ -8,10 +8,5 @@ router.use("/", homeRoutes);
 router.use("/dashboard", dashboardRoutes);
 router.use("/api", apiRoutes);
 
-// // if we make a request to any endpoint that doesn't exist
-// router.use((req, res) => {
-//     // error message indicates requested incorrect resource
-//     res.status(404).end();
-// });
 
 module.exports = router;

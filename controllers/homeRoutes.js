@@ -48,30 +48,6 @@ router.get("/garden/:id", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
-  try {
-    const plantData = await Plant.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const plant = plantData.map((plant) => plant.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render("homepage", {
-      plant,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 router.get("/plant/:id", async (req, res) => {
   try {
     const plantData = await Plant.findByPk(req.params.id, {
@@ -98,29 +74,6 @@ router.get("/calendar", async (req, res) => {
   res.render("calendar");
 });
 
-router.get("/", async (req, res) => {
-  try {
-    const animalData = await Animals.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const animals = animalData.map((garden) => animals.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render("dashboard", {
-      animals,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 router.get("/animal/:id", async (req, res) => {
   try {
@@ -173,6 +126,7 @@ router.get("/login", (req, res) => {
 
   res.render("login");
 });
+
 router.get("/signup", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -183,8 +137,8 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-// get all posts for homepage
-router.get("/", (req, res) => {
+// get all posts for resources page
+router.get("/resources", (req, res) => {
   console.log("======================");
   Post.findAll({
     include: [
@@ -211,7 +165,10 @@ router.get("/", (req, res) => {
       //   serialize obj down to properties you need with get()
       // this is what res.json() does automatically
       //   .render() can accept array or obj
-      res.render("homepage", { posts, loggedIn: req.session.loggedIn });
+      res.render("resources", { 
+        posts, 
+        loggedIn: req.session.loggedIn 
+      });
     })
     .catch((err) => {
       console.log(err);
@@ -257,13 +214,5 @@ router.get("/post/:id", (req, res) => {
     });
 });
 
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-  // login doesn't need variables so no second argument to render()
-  res.render("login");
-});
 
-module.exports = router;
+module.exports = router
