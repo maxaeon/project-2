@@ -1,11 +1,12 @@
 const router = require("express").Router();
+const withAuth = require("../utils/auth");
 const apiRoutes = require("./api");
 const homeRoutes = require("./homeRoutes");
-const dashboardRoutes = require("./dashboardRoutes");
+const profileRoutes = require('./profileRoutes')
 
 // collect packaged group of API endpoints and prefix with /api
 router.use("/", homeRoutes);
-router.use("/dashboard", dashboardRoutes);
+router.use("/profile", withAuth, profileRoutes);
 router.use("/api", apiRoutes);
 
 

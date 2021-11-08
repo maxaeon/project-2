@@ -5,6 +5,7 @@ const plantsRoutes = require('./plantsRoutes')
 const animalsRoutes = require('./animalsRoutes')
 const postRoutes = require("./postRoutes");
 const commentRoutes = require("./commentRoutes");
+const calendarRoutes = require('./calendarRoutes')
 
 // route.use('/animals',animalsRoutes)
 // collect endpoints and prefix them
@@ -22,5 +23,7 @@ router.use("/posts", postRoutes);
 router.use("/comments", commentRoutes);
 //  .api/animals/animalsRoutes
 router.use("/animals", animalsRoutes);
+
+// router.use('/calendar', calendarRoutes)
 
 module.exports = router;

@@ -62,7 +62,7 @@ Animal.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'garden',
+    modelName: 'animal',
   }
 );
 

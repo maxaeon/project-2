@@ -24,13 +24,6 @@ Livestock.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    livestock_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'livestock',
-        key: 'id',
-      },
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

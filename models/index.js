@@ -2,10 +2,10 @@
 const User = require('./User');
 const Garden = require('./Garden');
 const Plant = require('./Plant');
+const Animal = require('./Animal')
 const Post = require("./Post");
 const Comment = require("./Comment");
-const Garden = require('./Garden');
-const Plant = require("./Plant");
+// const Calendar = require('./Calendar');
 
 // create associations
 // One to many relationship
@@ -55,4 +55,15 @@ Post.hasMany(Comment, {
     foreignKey: "post_id"
 });
 
-module.exports = { User, Post, Comment, Garden, Plant };
+// Garden.hasOne(Calendar, {
+//     foreignKey: 'garden_id',
+//     onDelete: 'SET NULL'
+// })
+
+// Calendar.belongsTo(Garden, {
+//     foreignKey: 'garden_id',
+//     onDelete: 'SET NULL'
+// })
+
+
+module.exports = { User, Garden, Plant, Post, Animal, Comment  };

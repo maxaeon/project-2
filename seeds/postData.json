@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Ya dig it?",
+        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
+        "user_id": 1
+    },
+    {
+        "title": "Smell these roses!",
+        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
+        "user_id": 1
+    },
+    {
+        "title": "How do you like them apples?",
+        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
+        "user_id": 1
+    },
+    {
+        "title": "Orange you glad I didn't grow bananas?",
+        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
+        "user_id": 1
+    },
+    {
+        "title": "This is a title",
+        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
+        "user_id": 1
+    },
+    {
+        "title": "How to start your own garden with spades and hoes",
+        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
+        "user_id": 1
+    }
+]

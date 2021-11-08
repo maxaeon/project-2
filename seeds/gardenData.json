@@ -1,61 +1,61 @@
 [
   {
-    "name": "Front-Yard Garden",
+    "title": "Frontyard Garden",
     "description": "A front yard vegetable garden with corn, tomatoes, and more.",
     "user_id": 1
   },
   {
-    "name": "Orchard",
+    "title": "Orchard",
     "description": "fruit trees",
     "user_id": 1
   },
   {
-    "name": "Sidewalk-gardens",
+    "title": "Sidewalkgardens",
     "description": "sidewalk garden beds",
     "user_id": 1
   },
   {
-    "name": "Court-yard",
+    "title": "Courtyard",
     "description": "Central Garden Atrium",
     "user_id": 1
   },
   {
-    "name": "Back-Yard",
+    "title": "Backyard",
     "description": "20 acres",
     "user_id": 1
   },
   {
-    "name": "Front-Yard Garden",
+    "title": "Frontyard Garden",
     "description": "A front yard vegetable garden with corn, tomatoes, and more.",
     "user_id": 2
   },
   {
-    "name": "Back-Yard",
+    "title": "Back-Yard",
     "description": "20 acres",
     "user_id": 2
   },
   {
-    "name": "Front-Yard Garden",
+    "title": "Front-Yard Garden",
     "description": "A front yard vegetable garden with corn, tomatoes, and more.",
     "user_id": 3
   },
   {
-    "name": "Court-yard",
+    "title": "Court-yard",
     "description": "Central Garden Atrium",
     "user_id": 3
   },  
   {
-    "name": "Orchard",
+    "title": "Orchard",
     "description": "fruit trees",
     "user_id": 2
   },
   {
-    "name": "Court-yard",
+    "title": "Court-yard",
     "description": "Central Garden Atrium",
     "user_id": 4
   },
   {
-    "name": "Back-Yard",
+    "title": "Back-Yard",
     "description": "20 acres",
     "user_id": 4
   }

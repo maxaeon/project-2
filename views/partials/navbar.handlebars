@@ -17,17 +17,10 @@
                         class="py-4 px-2 text-gray-500 font-semibold hover:text-green-700 transition duration-300">Resources</a>
                     <a href="/weather"
                         class="py-4 px-2 text-gray-500 font-semibold hover:text-green-700 transition duration-300">Weather</a>
-                    {{#if logged_in}}
-                    <a href="/gardens"
-                        class="py-4 px-2 text-gray-500 font-semibold hover:text-green-700 transition duration-300">My
-                        Gardens</a>
-                    {{!-- {{else}} --}}
-
-                    {{/if}}
                 </div>
             </div>
             <!-- Secondary Navbar items -->
-            {{#if logged_in}}
+            {{#if loggedIn}}
             <div class="hidden md:flex items-center space-x-3 ">
                 <a href="/profile"
                     class="py-2 px-2 font-medium text-gray-500 font-semibold rounded hover:bg-green-700 hover:text-white transition duration-300">Profile</a>
