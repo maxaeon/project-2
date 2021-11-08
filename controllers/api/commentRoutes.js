@@ -26,7 +26,7 @@ router.post("/", (req, res) => {
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
       console.log(err);
-      res.status(400).json(err);
+      res.status(500).json(err);
     });
 });
 
