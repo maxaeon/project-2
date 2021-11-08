@@ -74,7 +74,7 @@ header, .project:not(:last-child) {
   border-bottom-width: 1px;
 }
 
-#add-garden, #delete-garden, #prev-month, #next-month{
+#add-garden, #delete-garden, #prev-month, #next-month, #close-modal{
   cursor: pointer;
 }
 
@@ -138,4 +138,17 @@ section h4 {
 }
 section {
   height: min-content;
+}
+
+#add-garden-modal {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  margin: auto;
+  left: 40%;
+  top: 20%;
+}
+
+#add-garden-modal h5 {
+  
 }

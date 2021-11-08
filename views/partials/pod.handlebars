@@ -6,15 +6,15 @@
     <div class="flex flex-row flex-wrap justify-around w-full">
         <img src="/assets/garden-square1.jpg" alt="" class="w-1/4 m-3 border-1 border-double border-black rounded-lg">
         <ul class="w-3/5 my-1">
-            <li class="my-1">Name: </li>
+            <li class="my-1">Name: {{plant.plant}}</li>
             <li class="mb-1">
-                {{#if annual}}
-                {{annual}}
+                {{#if plant.annual}}
+                {{plant.annual}}
                 {{else}}
-                {{perennial}}
+                {{plant.perennial}}
                 {{/if}}
             </li>
-            <li class="mb-1">When to plant: {{plantConditions}}</li>
+            <li class="mb-1">When to plant: {{plant.plantConditions}}</li>
         </ul>
     </div>
 </section>
