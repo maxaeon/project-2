@@ -12,7 +12,7 @@ Garden.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -30,11 +30,7 @@ Garden.init(
         model: 'user',
         key: 'id',
       },
-<<<<<<< HEAD
-    },
-=======
     }
->>>>>>> main
   },
   {
     sequelize,

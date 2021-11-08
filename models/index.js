@@ -1,13 +1,11 @@
-<<<<<<< HEAD
+// import all models
 const User = require('./User');
 const Garden = require('./Garden');
 const Plant = require('./Plant');
-=======
-// import all models
+const Animal = require('./Animal')
 const Post = require("./Post");
-const User = require("./User");
 const Comment = require("./Comment");
->>>>>>> main
+// const Calendar = require('./Calendar');
 
 // create associations
 // One to many relationship
@@ -21,17 +19,21 @@ Post.belongsTo(User, {
     onDelete: "SET NULL"
 });
 
-<<<<<<< HEAD
-Garden.hasMany(Plant, {
-  foreignKey: 'garden_id'
-});
-
-Plant.belongsTo(Garden,{
-  foreignKey: 'garden_id'
+User.hasMany(Garden, {
+    foreignKey: 'user_id'
 })
 
-module.exports = { User, Garden,Plant };
-=======
+Garden.belongsTo(User, {
+    foreignKey: 'user_id'
+})
+Garden.hasMany(Plant, {
+    foreignKey: 'user_id'
+})
+
+Plant.belongsTo(Garden, {
+    foreignKey: 'user_id'
+})
+
 // we don't have to specify comment as a through table
 // we don't need to access Post through Comment
 Comment.belongsTo(User, {
@@ -53,5 +55,15 @@ Post.hasMany(Comment, {
     foreignKey: "post_id"
 });
 
-module.exports = { User, Post, Comment };
->>>>>>> main
+// Garden.hasOne(Calendar, {
+//     foreignKey: 'garden_id',
+//     onDelete: 'SET NULL'
+// })
+
+// Calendar.belongsTo(Garden, {
+//     foreignKey: 'garden_id',
+//     onDelete: 'SET NULL'
+// })
+
+
+module.exports = { User, Garden, Plant, Post, Animal, Comment  };

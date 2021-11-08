@@ -1,18 +1,13 @@
 const router = require("express").Router();
-
+const withAuth = require("../utils/auth");
 const apiRoutes = require("./api");
-const homeRoutes = require("./home-routes");
-const dashboardRoutes = require("./dashboard-routes");
+const homeRoutes = require("./homeRoutes");
+const profileRoutes = require('./profileRoutes')
 
 // collect packaged group of API endpoints and prefix with /api
 router.use("/", homeRoutes);
-router.use("/dashboard", dashboardRoutes);
+router.use("/profile", withAuth, profileRoutes);
 router.use("/api", apiRoutes);
 
-// // if we make a request to any endpoint that doesn't exist
-// router.use((req, res) => {
-//     // error message indicates requested incorrect resource
-//     res.status(404).end();
-// });
 
 module.exports = router;

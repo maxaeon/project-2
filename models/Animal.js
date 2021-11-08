@@ -49,13 +49,20 @@ Animal.init(
     comments: {
       type: DataTypes.STRING,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'garden',
+    modelName: 'animal',
   }
 );
 

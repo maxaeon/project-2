@@ -1,18 +1,4 @@
 [
-        {
-        "animal_species": "",
-        "breed": "",
-        "when_fertile": "",
-        "average_number_of_offspring": "",
-        "gestation_period": "",
-        "length_of_time_before_offspring_can_be_sold": "",
-        "habitat_requirements": "",
-        "food_requirements": "",
-        "stimulation_requirements": "",
-        "adult_age": "",
-        "adult_weight_size": "",
-        "additional_comments": ""
-    },
     {
         "animal_species": "pig",
         "breed": "-",
