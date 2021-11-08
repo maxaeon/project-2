@@ -3,8 +3,8 @@ const deleteGardenBtns = document.querySelectorAll('.delete-garden svg')
 
 const deleteGarden = async (event) => {
     console.log(event.target)
-    event.preventDefault()
-    event.stopPropagation()
+    // event.preventDefault()
+    // event.stopPropagation()
     const gardenId = event.target.id
 
     const response = await fetch(`/api/garden/${gardenId}`, {
@@ -15,6 +15,7 @@ const deleteGarden = async (event) => {
     })
     const data = await response.json()
     console.log(data)
+    document.location.replace('/profile')
 }
 
 for (let button of deleteGardenBtns) {
