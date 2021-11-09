@@ -1,13 +1,24 @@
-<div class="flex flex-row flex-wrap border-1 border-black border-solid rounded-xl bg-light-green w-1/4">
-    <div class="w-full p-3">
-        <form class="flex flex-row flex-wrap">
-            <label for="garden-name" class="w-full text-left">Post Title</label>
-            <input type="text" id="post-title" name="post-title" class="ring-1 font-semibold ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300 mb-3" />
-            <label for="description" class="w-full text-left">Content</label>
-            <textarea type="textarea" name="description" id="post-content" placeholder="Small description of the garden" class="ring-1 ring-gray-600 w-full rounded-md my-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+{{> navbar}}
+
+<main class="flex flex-column justify-around lg:flex-row flex-wrap p-0">
+
+    <div class="flex flex-row flex-wrap border-1 border-black border-solid rounded-xl bg-light-green w-1/4 my-10">
+        <div class="w-full p-3">
+            <form class="flex flex-row flex-wrap">
+                <label for="garden-name" class="w-full text-left">Post Title</label>
+                <input type="text" id="post-title" name="post-title"
+                    class="ring-1 font-semibold ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300 mb-3" />
+                <label for="description" class="w-full text-left">Content</label>
+                <textarea type="textarea" name="description" id="post-content"
+                    placeholder="Small description of the garden"
+                    class="ring-1 ring-gray-600 w-full rounded-md my-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
             </textarea>
-            <button  id="add-post" type="submit" class="justify-self-end bg-midnight-green font-bold rounded-lg px-6 py-2 my-3 uppercase text-sm text-sky-blue">Create Post</button>
-        </form>
+                <button id="add-post" type="submit"
+                    class="justify-self-end bg-midnight-green font-bold rounded-lg px-6 py-2 my-3 uppercase text-sm text-sky-blue">Create
+                    Post</button>
+            </form>
+        </div>
     </div>
-</div>
-<script src="/js/newPost.js"></script>
+    <script src="/js/newPost.js"></script>
+
+</main>

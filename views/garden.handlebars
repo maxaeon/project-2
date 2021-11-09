@@ -1,3 +1,6 @@
+{{> navbar}}
+
+<main class="flex flex-column justify-around lg:flex-row flex-wrap p-0">
 
 <section class="w-full lg:w-1/2 border-1 border-black border-solid rounded-xl m-3 text-left min-h-full">
     <h4 class="text-lg font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white flex flex-row justify-between">
@@ -12,22 +15,10 @@
     </h4>
     <ul class="flex justify-between flex-wrap">
 
-        <!-- User's gardens -->
-        {{#each gardens as |garden|}}
-        <li class="w-full border-b-1 flex justify-between mb-3 p-3">
-            <a href="/garden/{{garden.id}}"> {{ garden.title }} </a>
-            <span class="self-center delete-garden">
-                <svg xmlns="http://www.w3.org/2000/svg"  id="{{garden.id}}" class="h-5 w-5" viewBox="0 0 20 20" fill="red">
-                    <path  id="{{garden.id}}" fill-rule="evenodd"
-                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                        clip-rule="evenodd" />
-                </svg>
-            </span>
-        </li>
-        {{/each}}
 
-    </ul>
-</section>
+    <section class="w-full lg:w-1/2 border-1 border-black border-solid rounded-xl m-3 text-left">
+        <h4
+            class="text-lg font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white flex flex-row justify-between">
 
 <div id="add-garden-modal" class="flex flex-row flex-wrap border-1 border-black border-solid rounded-xl bg-light-green w-1/4">
     <h5 class="text-lg text-left font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white w-full flex flex-row  justify-between">

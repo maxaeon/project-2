@@ -11,23 +11,20 @@ router.get("/", withAuth, async (req, res) => {
       attributes: { exclude: ["password"] },
       include: [{ model: Garden }],
     });
-
-    // Plant of the Day
-    const plantCount = await Plant.count()
-    const plantDatum = await Plant.findByPk(Math.floor(Math.random() * plantCount + 1))
-    // Post of the Day
-    const postCount = await Post.count()
-    const postDatum = await Post.findByPk(Math.floor(Math.random() * postCount + 1), {
-      include: [{ model: User }]
-    })
-
     // All the users posts
     const allPosts = await Post.findAll({
       where: {
         user_id: req.session.user_id
       }
     })
+    // Plant of the Day
+    const plantDatum = await Plant.findByPk(1)
+    // Post of the Day
+    const postDatum = await Post.findByPk(1, {
+      include: [{ model: User }]
+    })
     const userPosts = allPosts.map((resource) => resource.get({ plain: true }));
+    console.log(userPosts)
     const post = await postDatum.get({ plain: true })
     const plant = await plantDatum.get({ plain: true })
     const user = await userData.get({ plain: true });
@@ -38,8 +35,9 @@ router.get("/", withAuth, async (req, res) => {
       plant,
       loggedIn: req.session.loggedIn
     });
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    console.log(error)
+    res.status(500).json(error);
   }
 });
 
