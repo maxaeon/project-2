@@ -9,11 +9,11 @@
             </svg>
         </span>
     </h4>
-    <ul class="flex justify-between flex-wrap">
+    <ul class="flex justify-between flex-wrap bg-light-green mb-2">
 
         <!-- User's gardens -->
         {{#each gardens as |garden|}}
-        <li class="w-full border-b-1 flex justify-between mb-3 p-3">
+        <li class="w-full border-b-1 flex justify-between p-3 font-semibold border-green-600 border-1 divide-y md:text-sm bg-gray-300">
             <a href="/garden/{{garden.id}}"> {{ garden.title }} </a>
             <span class="self-center delete-garden">
                 <svg xmlns="http://www.w3.org/2000/svg"  id="{{garden.id}}" class="h-5 w-5" viewBox="0 0 20 20" fill="red">
