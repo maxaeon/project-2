@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Plant, User, Garden } = require("../../models");
+const { Plant, Garden } = require("../../models");
 // const withAuth = require('../../utils/auth');
 
 // CREATE a Plant
