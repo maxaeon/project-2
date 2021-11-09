@@ -18,16 +18,19 @@ router.get("/", withAuth, async (req, res) => {
     const postDatum = await Post.findByPk(Math.floor(Math.random() * postCount + 1), {
       include: [{ model: User }]
     })
-    // const posts = Post.findAll()
-    // const resources = posts.map((resource) => resource.get({ plain: true }));
-    // console.log(resources)
+    const allPosts = await Post.findAll({
+      where: {
+        user_id: req.session.user_id
+      }
+    })
+    const userPosts = allPosts.map((resource) => resource.get({ plain: true }));
     const post = await postDatum.get({ plain: true })
     const plant = await plantDatum.get({ plain: true })
     const user = await userData.get({ plain: true });
-
     res.render("dashboard", {
       ...user,
       ...post,
+      userPosts,
       plant,
       loggedIn: req.session.loggedIn
     });
