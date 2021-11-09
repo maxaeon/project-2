@@ -13,10 +13,10 @@ Created by Tevis, Adam, Travis, and Max.
 
 ## Questions
 For additional questions and information, please visit each member's Github profile for up-to-date contact information.
-[Tevis's GitHub profile](github.com/tevissaur)
-[Adam's GitHub profile](github.com/AdamHale88)
-[Travis's GitHub profile](github.com/Tschram93)
-[Max's GitHub profile](github.com/maxaeon/)
+[Tevis's GitHub profile](https://github.com/tevissaur)
+[Adam's GitHub profile](https://github.com/AdamHale88)
+[Travis's GitHub profile](https://github.com/Tschram93)
+[Max's GitHub profile](https://github.com/maxaeon/)
 
 ## License
 ​
