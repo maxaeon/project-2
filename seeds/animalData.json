@@ -11,7 +11,8 @@
         "stimulation_requirements": "socialization and exercise",
         "adult_age": "6-7 months",
         "adult_weight_size": "6 pounds on average, but the range is 4-16 pounds",
-        "additional_comments": "Plan on how to deal with manure."
+        "additional_comments": "Plan on how to deal with manure.",
+        "user_id": 1
     },
     {
         "animal_species": "domestic cat",
@@ -25,7 +26,8 @@
         "stimulation_requirements": "socialization and mental stimulation required",
         "adult_age": "1 year",
         "adult_weight_size": "10 pounds, depending on breed and frame",
-        "additional_comments": "Cat waste is particularly dangerous for pregnant women to be exposed to. Regular veterinary appointments for cats are recommended. Due to shelter overcrowding, breeding cats should only be done after careful consideration, and any cats not intended to be bred should not be allowed to reproduce."
+        "additional_comments": "Cat waste is particularly dangerous for pregnant women to be exposed to. Regular veterinary appointments for cats are recommended. Due to shelter overcrowding, breeding cats should only be done after careful consideration, and any cats not intended to be bred should not be allowed to reproduce.",
+        "user_id": 2
     },
     {
         "animal_species": "dog",
@@ -39,6 +41,21 @@
         "stimulation_requirements": "socialization a must for all breeds, exercise requirements vary by breed and individual dog needs. dogs prefer to be kept indoors with their humans at least part of the time, but some people raise their dogs outdoors in kennels",
         "adult_age": "approximately 2 years",
         "adult_weight_size": "varies by breed",
-        "additional_comments": "Dog waste should always be cleaned up to avoid transmitting diseases. Rabies vaccinations are generally required in the U.S. Regular veterinary appointments are recommended. Due to shelter overcrowding, breeding dogs should only be done after careful consideration, and any dogs not intended to be bred should not be allowed to reproduce."
+        "additional_comments": "Dog waste should always be cleaned up to avoid transmitting diseases. Rabies vaccinations are generally required in the U.S. Regular veterinary appointments are recommended. Due to shelter overcrowding, breeding dogs should only be done after careful consideration, and any dogs not intended to be bred should not be allowed to reproduce.",
+        "user_id": 3
+    },
+    {
+        "animal_species": "Parrot",
+        "breed": "-",
+        "when_fertile": "n/a",
+        "average_number_of_offspring": "varies by breed, average is 8",
+        "gestation_period": "58-68 days",
+        "minimum length_of_time_before_offspring_can_be_sold": "",
+        "habitat_requirements": "n/a",
+        "food_requirements": "boo",
+        "stimulation_requirements": "ipsum",
+        "adult_weight_size": "varies by breed",
+        "additional_comments": "lorem.",
+        "user_id": 4
     }
 ]

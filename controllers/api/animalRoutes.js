@@ -1,14 +1,14 @@
 const router = require("express").Router();
-const { Animals, User } = require("../../models");
+const { Animal, User } = require("../../models");
 // const withAuth = require('../../utils/auth');
 
 // CREATE a Animal
 router.post("/", async (req, res) => {
   try {
-    const newAnimals = await Animals.create({
+    const newAnimal = await Animal.create({
       ...req.body,
     });
-    res.status(200).json(newAnimals);
+    res.status(200).json(newAnimal);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -17,8 +17,8 @@ router.post("/", async (req, res) => {
 // GET all Animals
 router.get("/", async (req, res) => {
   try {
-    const animalsData = await Animals.findAll();
-    res.status(200).json(animalData);
+    const animalsData = await Animal.findAll();
+    res.status(200).json(animalsData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
 // GET a single animal
 router.get("/:id", async (req, res) => {
   try {
-    const animalData = await Animals.findByPk(req.params.id, {
+    const animalData = await Animal.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -49,7 +49,7 @@ router.get("/:id", async (req, res) => {
 // DELETE a Animal
 router.delete("/:id", async (req, res) => {
   try {
-    const animalData = await Animals.destroy({
+    const animalData = await Animal.destroy({
       where: {
         id: req.params.id,
       },

@@ -2,10 +2,11 @@ const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const gardenRoutes = require('./gardenRoutes');
 const plantsRoutes = require('./plantsRoutes')
-const animalsRoutes = require('./animalsRoutes')
+const animalRoutes = require('./animalRoutes')
+const livestockRoutes = require('./livestockRoutes')
 const postRoutes = require("./postRoutes");
 const commentRoutes = require("./commentRoutes");
-const calendarRoutes = require('./calendarRoutes')
+// const calendarRoutes = require('./calendarRoutes')
 
 // route.use('/animals',animalsRoutes)
 // collect endpoints and prefix them
@@ -22,7 +23,9 @@ router.use("/posts", postRoutes);
 //  .api/comments/commentRoutes
 router.use("/comments", commentRoutes);
 //  .api/animals/animalsRoutes
-router.use("/animals", animalsRoutes);
+router.use("/animal", animalRoutes);
+//  .api/livestock/livestockRoutes
+router.use("/livestock", livestockRoutes);
 
 // router.use('/calendar', calendarRoutes)
 

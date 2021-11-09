@@ -11,7 +11,8 @@
         "stimulation_requirements": "socialization and room to exercise",
         "adult_age": "2-3 years",
         "adult_weight_size": "around 250 pounds",
-        "additional_comments": "Plan on how to deal with manure and flies."
+        "additional_comments": "Plan on how to deal with manure and flies.",
+        "user_id": 1
     },
     {
         "animal_species": "cow",
@@ -25,7 +26,8 @@
         "stimulation_requirements": "socialization, room to exercise",
         "adult_age": "12-14 months",
         "adult_weight_size": "1400 pounds",
-        "additional_comments": "Regular veterinary appointments are recommended. Cows can be used as milk-producers, meat, breeding stock, and more."
+        "additional_comments": "Regular veterinary appointments are recommended. Cows can be used as milk-producers, meat, breeding stock, and more.",
+        "user_id": 2
     },
     {
         "animal_species": "horse",
@@ -39,7 +41,8 @@
         "stimulation_requirements": "socialization, training, and exercise",
         "adult_age": "4-5 years",
         "adult_weight_size": "900-2,000 pounds",
-        "additional_comments": "Plan on how to deal with manure and flies. Regular veterinary appointments are recommended. Older horses are better for first-time horse owners, so foals should only be sold to experienced horse-owners."
+        "additional_comments": "Plan on how to deal with manure and flies. Regular veterinary appointments are recommended. Older horses are better for first-time horse owners, so foals should only be sold to experienced horse-owners.",
+        "user_id": 3
     },
     {
         "animal_species": "goat",
@@ -53,7 +56,8 @@
         "stimulation_requirements": "socialization, exercise",
         "adult_age": "8 months-1 year",
         "adult_weight_size": "120-200 pounds",
-        "additional_comments": "Plan on how to deal with manure and flies. Regular veterinary appointments are recommended."
+        "additional_comments": "Plan on how to deal with manure and flies. Regular veterinary appointments are recommended.",
+        "user_id": 3
     },
     {
         "animal_species": "chicken",
@@ -67,7 +71,8 @@
         "stimulation_requirements": "socialization and exercise",
         "adult_age": "4-5 months",
         "adult_weight_size": "average 5-6 pounds",
-        "additional_comments": "Plan on how to deal with manure."
+        "additional_comments": "Plan on how to deal with manure.",
+        "user_id": 2
     },
     {
         "animal_species": "duck",
@@ -81,6 +86,7 @@
         "stimulation_requirements": "exercise and socialization",
         "adult_age": "4-5 months",
         "adult_weight_size": "2-6 pounds",
-        "additional_comments": "Plan on how to deal with manure."
+        "additional_comments": "Plan on how to deal with manure.",
+        "user_id": 4
     }
 ]
