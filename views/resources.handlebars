@@ -4,12 +4,11 @@
         Resources
     </h4>
     <div class="border-solid border-1 border-gray-400 bg-light-green text-midnight-green rounded-b-xl flex flex-row flex-wrap">
-        {{log posts}}
         {{#each posts as |post|}}
         <div class="w-full my-5 px-5 text-left">
             <a href="/post/{{post.id}}" class="text-xl ">{{post.title}}</a>
             <div>written by {{user.username}}</div>
-            <div>{{date_created}}</div>
+            <div>{{format_date createdAt}}</div>
 
         </div>
         {{/each}}

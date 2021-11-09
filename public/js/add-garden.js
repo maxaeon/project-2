@@ -24,9 +24,6 @@ const createGarden = async (event) => {
         description: newGardenDesc,
     }
 
-    console.log(newGardenData)
-    console.log(JSON.stringify(newGardenData))
-
     const response = await fetch('api/garden', {
         method: "POST",
         body: JSON.stringify(newGardenData),
@@ -38,6 +35,7 @@ const createGarden = async (event) => {
     if (response.ok) {
         const data = await response.text()
         console.log(data)
+        document.location.replace('/profile')
     } else {
         console.log(response)
     }

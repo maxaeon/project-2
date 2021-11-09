@@ -78,7 +78,7 @@ header, .project:not(:last-child) {
   cursor: pointer;
 }
 
-.delete-garden svg {
+.delete-garden svg, .delete-post svg {
   cursor: pointer;
 }
 
@@ -121,6 +121,8 @@ header, .project:not(:last-child) {
 ::-webkit-scrollbar {
   width: 1vh;
   height: 5vh;
+  position: absolute;
+  right: 0;
 }
 
 ::-webkit-scrollbar-track {
