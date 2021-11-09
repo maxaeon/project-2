@@ -281,3 +281,10 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
+
+#hero {
+  background-image: url('/assets/pm.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
