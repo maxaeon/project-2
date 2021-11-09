@@ -11,7 +11,7 @@ const deletePost = async (event) => {
         }
     })
 
-    document.location.reload()
+    document.location.replace('/profile')
 }
 
 for (let button of deletePostBtns) {

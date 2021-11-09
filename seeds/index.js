@@ -1,12 +1,13 @@
 const sequelize = require('../config/connection');
-const { User, Garden, Plant, Post, Animal, Comment, Calendar } = require('../models');
+const { User, Garden, Plant, Post, Animal, Livestock } = require('../models');
 
 const userData = require('./userData.json');
 const gardenData = require('./gardenData.json');
 const plantData = require('./plantData.json');
 const animalData = require('./animalData.json');
 const postData = require('./postData.json')
-const calendarData = require('./calendarData.json')
+const livestockData = require('./livestockData.json')
+// const calendarData = require('./calendarData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -31,8 +32,8 @@ const seedDatabase = async () => {
   await Post.bulkCreate(postData)
   console.log('\n----- POST SEEDED -----\n')
   
-  // await Calendar.bulkCreate(calendarData)
-  // console.log('\n----- CALENDAR SEEDED -----\n')
+  await Livestock.bulkCreate(livestockData)
+  console.log('\n----- Livestock SEEDED -----\n')
 
   process.exit(0);
 };
