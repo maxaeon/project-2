@@ -148,7 +148,35 @@ section {
 
 #add-garden-modal {
   visibility: hidden;
-  position: fixed;
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  left: 40%;
+  top: 20%;
+}
+
+
+#add-animal-modal {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  left: 40%;
+  top: 20%;
+}
+
+#add-plant-modal {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  left: 40%;
+  top: 20%;
+}
+
+#add-livestock-modal {
+  visibility: hidden;
+  position: absolute;
   z-index: 1;
   margin: auto;
   left: 40%;
