@@ -8,10 +8,22 @@
   <!-- Dashboard body -->
   <div
     class="border-solid border-1 border-black bg-light-green text-midnight-green rounded-b-xl flex flex-wrap min-h-full">
-    <div class="w-full flex flex-wrap justify-between mb-3">
-      {{> dashboard-garden}}
-      {{> dashboard-weather}}
-    </div>
+        <div class="w-full flex flex-direction-row flex-wrap justify-center">
+            <div>
+              {{> dashboard-garden}}
+            </div>     
+
+            <div>
+              {{> dashboard-garden}}
+            </div>
+
+            <div class="w-full flex flex-wrap justify-center">
+            {{> dashboard-weather}}
+          </div>
+
+      
+    
+    
     <div class="w-full flex flex-wrap justify-between">
       {{> pod}}
       {{> aod}}
