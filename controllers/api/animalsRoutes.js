@@ -46,7 +46,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// DELETE a Plant
+// DELETE a Animal
 router.delete("/:id", async (req, res) => {
   try {
     const animalData = await Animals.destroy({

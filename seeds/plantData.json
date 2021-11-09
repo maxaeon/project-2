@@ -17,6 +17,7 @@
         "days_to_germination_max": 15,
         "days_to_maturity_min": 60,
         "days_to_maturity_max": 115
+        
     },
     {
         "plant": "lettuce",
