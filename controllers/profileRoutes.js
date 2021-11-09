@@ -12,12 +12,16 @@ router.get("/", withAuth, async (req, res) => {
       include: [{ model: Garden }],
     });
 
+    // Plant of the Day
     const plantCount = await Plant.count()
     const plantDatum = await Plant.findByPk(Math.floor(Math.random() * plantCount + 1))
+    // Post of the Day
     const postCount = await Post.count()
     const postDatum = await Post.findByPk(Math.floor(Math.random() * postCount + 1), {
       include: [{ model: User }]
     })
+
+    // All the users posts
     const allPosts = await Post.findAll({
       where: {
         user_id: req.session.user_id
