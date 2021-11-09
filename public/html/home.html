@@ -149,25 +149,26 @@
                         </div>
                         <div>
                             <div class="bg-off-white rounded-xl shadow-lg p-8 text-gray-600 md:w-80">
-                                <form action="" class="flex flex-col space-y-4">
+                                <form action="https://formsubmit.co/TSchram93@gmail.com" method="POST" class="flex flex-col space-y-4">
                                     <div>
                                         <label for="for="" class=" text-midnight-green text-sm">Your
                                             name</label>
-                                        <input id="nameContact" type="text" placeholder="Your name"
-                                            class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+                                        <input id="nameContact" type="text" placeholder="Your name" 
+                                            class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300" required>
                                     </div>
                                     <div>
                                         <label for="for="" class=" text-midnight-green text-sm">Email
                                             Address</label>
-                                        <input id="emailContact" type="text" placeholder="Email Address"
-                                            class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+                                        <input id="emailContact" name="email" type="text" placeholder="Email Address"
+                                            class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300" required>
                                     </div>
                                     <div>
                                         <label for="" class="text-midnight-green text-sm">Message</label>
                                         <textarea id="messageContent" type="text" placeholder="Message" rows="4"
-                                            class="ring-1 ring-gray-300 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+                                            class="ring-1 ring-gray-300 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300" required>
                                                     </textarea>
                                     </div>
+                                    <input type="hidden" name="_captcha" value="false">
                                     <button id="contactUsSubmit"
                                         class="inline-block self-end bg-midnight-green font-bold rounded-lg px-6 py-2 uppercase text-sm text-sky-blue">
                                         Send Message</button>
