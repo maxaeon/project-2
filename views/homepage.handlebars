@@ -11,11 +11,11 @@
             homesteader. Its purpose is intended to optimize a garden or farm.
           </p>
         </div>
-        <div class="flex flex-col text-light-green items-end">
+        <div class="flex flex-col sm:flex-row text-light-green justify-between">
+          <img src="../assets/weather-forecast.png" alt="Logo" class="h-40 w-40 rounded m-auto my-5" id="logo">
           <ul class="space-y-4 gap-6 text-sky-blue">
             <li class="ml-2 text-md">Length of the Grow Cycle</li>
             <li class="ml-2 text=md">Optimal plotting patterns</li>
-            <li class=""></li>
           </ul>
         </div>
       </div>
@@ -25,63 +25,60 @@
     <!-- Contact Cards -->
 
     <div
-      class="bg-dark-green-0-85 flex flex-end flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 m-3 w-full lg:w-1/2 max-w-4xl p-5 sm:p-12 rounded-xl shadow-lg text-off-white">
-      <div class="flex flex-col space-y-8 justify-between">
-        <div>
-          <h1 class="font-bold text-4xl tracking-wide">Contact Us!</h1>
-          <p class=" pt-2 text-off-white text-sm">Lorem ipsum dolor sit amet
-            consectetur,
-            adipisicing
-            elit.
-            Corporis provident necessitatibus
-            aliquid ad nostrum reprehenderit eos minima praesentium, asperiores
-            culpa?
-          </p>
+      class="bg-dark-green-0-85 flex flex-end flex-wrap flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 m-3 w-full lg:w-1/2 p-5 sm:p-5 sm:py-10 rounded-xl shadow-lg text-off-white justify-around">
+
+      <div class="w-full lg:w-1/3">
+        <h1 class="font-bold text-4xl tracking-wide">Contact Us!</h1>
+        <p class=" pt-2 text-off-white text-sm">Lorem ipsum dolor sit amet
+          consectetur,
+          adipisicing
+          elit.
+          Corporis provident necessitatibus
+          aliquid ad nostrum reprehenderit eos minima praesentium, asperiores
+          culpa?
+        </p>
+      <div class="flex flex-col space-y-6 mt-5">
+        <div class="inline-flex space-x-2 items-center">
+          <ion-icon name="logo-github" class="text-sky-blue text-xl"></ion-icon>
+          <a href="https://github.com/maxaeon/project-2">Github</a>
         </div>
-        <div class="flex flex-col space-y-6">
-          <div class="inline-flex space-x-2 items-center">
-            <ion-icon name="logo-github" class="text-sky-blue text-xl"></ion-icon>
-            <a href="https://github.com/maxaeon/project-2">Github</a>
-          </div>
-          <div class="inline-flex space-x-2 items-center">
-            <ion-icon name="mail-outline" class="text-sky-blue text-xl"></ion-icon>
-            <a href="tevisreilly1@gmail.com">GMail</a>
-          </div>
+        <div class="inline-flex space-x-2 items-center">
+          <ion-icon name="mail-outline" class="text-sky-blue text-xl"></ion-icon>
+          <a href="tevisreilly1@gmail.com">GMail</a>
         </div>
       </div>
-      <div>
-        <div class="bg-off-white rounded-xl shadow-lg p-8 text-gray-600 md:w-80">
-          <form action="" class="flex flex-col space-y-4">
-            <div>
-              <label for="" class=" text-midnight-green text-sm">Your
-                name</label>
-              <input id="nameContact" type="text" placeholder="Your name"
-                class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
-            </div>
-            <div>
-              <label for="" class=" text-midnight-green text-sm">Email
-                Address</label>
-              <input id="emailContact" type="text" placeholder="Email Address"
-                class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
-            </div>
-            <div>
-              <label for="" class="text-midnight-green text-sm">Message</label>
-              <textarea id="messageContent" type="text" placeholder="Message" rows="4"
-                class="ring-1 ring-gray-300 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+      </div>
+      <div class="bg-off-white rounded-xl shadow-lg p-8 text-gray-600 w-full lg:w-1/2">
+        <form action="" class="flex flex-col space-y-4">
+          <div>
+            <label for="" class=" text-midnight-green text-sm">Your
+              name</label>
+            <input id="nameContact" type="text" placeholder="Your name"
+              class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+          </div>
+          <div>
+            <label for="" class=" text-midnight-green text-sm">Email
+              Address</label>
+            <input id="emailContact" type="text" placeholder="Email Address"
+              class="ring-1 ring-gray-600 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
+          </div>
+          <div>
+            <label for="" class="text-midnight-green text-sm">Message</label>
+            <textarea id="messageContent" type="text" placeholder="Message" rows="4"
+              class="ring-1 ring-gray-300 w-full rounded-md mt-2 px-4 py-2 outline-none focus:ring-2 focus:ring-blue-300">
                                                     </textarea>
-            </div>
-            <button id="contactUsSubmit"
-              class="inline-block self-end bg-midnight-green font-bold rounded-lg px-6 py-2 uppercase text-sm text-sky-blue">
-              Send Message</button>
-          </form>
-        </div>
+          </div>
+          <button id="contactUsSubmit"
+            class="inline-block self-end bg-midnight-green font-bold rounded-lg px-6 py-2 uppercase text-sm text-sky-blue">
+            Send Message</button>
+        </form>
       </div>
 
     </div>
   </section>
   <section class="flex w-full justify-end items-center" id="about-us">
 
-    </section>
+  </section>
 </main>
 
 <footer>

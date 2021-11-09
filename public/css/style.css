@@ -4,6 +4,7 @@ header, .project:not(:last-child) {
 
 * {
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .no-button {
