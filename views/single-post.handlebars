@@ -1,19 +1,25 @@
-{{> post-info post}}
 
-{{#if loggedIn}}
-<form class="comment-form w-1/2 m-auto">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+{{> navbar}}
+<main class="flex flex-column justify-around lg:flex-row flex-wrap p-0">
 
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
-{{/if}}
+  {{> post-info post}}
 
-{{> comments post.comments}}
+  {{#if loggedIn}}
+  <form class="comment-form w-1/2 m-auto">
+    <div>
+      <textarea name="comment-body" rows="3"></textarea>
+    </div>
 
-{{#if loggedIn}}
-<script src="/js/comment.js"></script>
-{{/if}}
+    <div>
+      <button type="submit">add comment</button>
+    </div>
+  </form>
+  {{/if}}
+
+  {{> comments post.comments}}
+
+  {{#if loggedIn}}
+  <script src="/js/comment.js"></script>
+  {{/if}}
+
+</main>

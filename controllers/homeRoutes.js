@@ -61,7 +61,9 @@ router.get("/plant/:id", async (req, res) => {
 // withAuth() calls next() anonymous fx OR res.redirect("/login")
 router.get("/add-post", async (req, res) => {
   try {
-    res.render('add-post')
+    res.render('add-post', {
+      loggedIn: req.session.loggedIn
+    })
   } 
   catch(error) {
     console.log(error)

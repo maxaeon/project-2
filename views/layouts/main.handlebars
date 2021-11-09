@@ -12,10 +12,8 @@
 </head>
 
 <body class=" antialiased bg-light-green pb-5">
-  {{> navbar}}
-  <main class="flex flex-column justify-around lg:flex-row flex-wrap p-0">
-    {{{body}}}
-  </main>
+  {{{body}}}
+  
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}

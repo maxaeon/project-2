@@ -26,9 +26,17 @@ header, .project:not(:last-child) {
 .bg-dark-green {
   background: #202E1D;
 }
+.bg-dark-green-0-85 {
+  background: rgba(32, 46, 29, 0.85);
+  
+}
 
 .bg-midnight-green {
   background: #100804;
+}
+
+.bg-midnight-green-o-85 {
+  background: rgba(16, 8, 4, 0.85);
 }
 
 .bg-light-green {
@@ -70,11 +78,12 @@ header, .project:not(:last-child) {
 .border-1 {
   border-width: 1px;
 }
+
 .border-b-1 {
   border-bottom-width: 1px;
 }
 
-#add-garden, #prev-month, #next-month, #close-modal{
+#add-garden, #prev-month, #next-month, #close-modal {
   cursor: pointer;
 }
 
@@ -85,18 +94,23 @@ header, .project:not(:last-child) {
 .grid-rows-7 {
   grid-template-rows: repeat(7, minmax(0, 1fr));
 }
+
 .grid-rows-8 {
   grid-template-rows: repeat(8, minmax(0, 1fr));
 }
+
 .grid-rows-9 {
   grid-template-rows: repeat(9, minmax(0, 1fr));
 }
+
 .grid-rows-10 {
   grid-template-rows: repeat(10, minmax(0, 1fr));
 }
+
 .grid-rows-11 {
   grid-template-rows: repeat(11, minmax(0, 1fr));
 }
+
 .grid-rows-12 {
   grid-template-rows: repeat(12, minmax(0, 1fr));
 }
@@ -104,19 +118,22 @@ header, .project:not(:last-child) {
 .row-start-8 {
   grid-row-start: 8;
 }
+
 .row-start-9 {
   grid-row-start: 9;
 }
+
 .row-start-10 {
   grid-row-start: 10;
 }
+
 .row-start-11 {
   grid-row-start: 11;
 }
+
 .row-start-12 {
   grid-row-start: 12;
 }
-
 
 ::-webkit-scrollbar {
   width: 1vh;
@@ -142,6 +159,7 @@ header, .project:not(:last-child) {
 section h4 {
   height: 3.5rem;
 }
+
 section {
   height: min-content;
 }
@@ -171,7 +189,7 @@ textarea {
   min-height: 100px;
 }
 
-form > div {
+form>div {
   margin-bottom: 2%;
 }
 
@@ -285,6 +303,13 @@ footer {
 #hero {
   background-image: url('/assets/pm.jpg');
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contact-us {
+  background-image: url('/assets/ducks-n-rabbits.jpg');
+  background-position: bottom right ;
   background-size: cover;
   background-repeat: no-repeat;
 }
