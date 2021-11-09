@@ -1,17 +1,16 @@
-
 {{> navbar}}
 <main class="flex flex-column justify-around lg:flex-row flex-wrap p-0">
 
   {{> post-info post}}
 
   {{#if loggedIn}}
-  <form class="comment-form w-1/2 m-auto">
-    <div>
-      <textarea name="comment-body" rows="3"></textarea>
-    </div>
+  <form class="comment-form w-3/5 m-auto flex flex-wrap flex-row">
+    <textarea name="comment-body" rows="2" class="w-3/4 m-auto"></textarea>
+    <div class="w-3/4 m-auto my-5 flex flex-row justify-end">
+      <button type="submit"
+        class="py-2 px-2 font-medium text-white bg-green-500 font-semibold rounded hover:bg-green-600 transition duration-300">add
+        comment</button>
 
-    <div>
-      <button type="submit">add comment</button>
     </div>
   </form>
   {{/if}}

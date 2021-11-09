@@ -2,6 +2,11 @@ header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
+* {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
 .no-button {
   background: none;
   border: none;
@@ -26,9 +31,9 @@ header, .project:not(:last-child) {
 .bg-dark-green {
   background: #202E1D;
 }
+
 .bg-dark-green-0-85 {
   background: rgba(32, 46, 29, 0.85);
-  
 }
 
 .bg-midnight-green {
@@ -173,7 +178,6 @@ section {
   top: 20%;
 }
 
-
 #add-animal-modal {
   visibility: hidden;
   position: absolute;
@@ -214,7 +218,6 @@ textarea:focus, input:focus {
 
 textarea {
   min-width: 40%;
-  min-height: 100px;
 }
 
 form>div {
@@ -337,7 +340,7 @@ footer {
 
 #contact-us {
   background-image: url('/assets/ducks-n-rabbits.jpg');
-  background-position: bottom right ;
+  background-position: bottom right;
   background-size: cover;
   background-repeat: no-repeat;
 }
