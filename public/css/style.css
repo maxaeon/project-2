@@ -320,6 +320,18 @@ main {
   margin-bottom: 5%;
 }
 
+#blog-container .blog-post:nth-of-type(even) {
+  background: #F5F5F5;
+}
+
+#signup-container {
+  background-image: url('/assets/ducks-n-rabbits.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 70%;
+}
+
 footer {
   border-top: 1px solid #ccc;
   background-image: url('/assets/weather-forecast.png');
