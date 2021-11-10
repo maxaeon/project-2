@@ -1,12 +1,17 @@
 <section
-    class="w-full lg:w-3/5 border-1 border-black border-solid bg-med-green text-white rounded-xl m-3 text-left flex flex-row flex-wrap">
-    <h4 class="text-lg text-black w-full font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white text-left">
-        Featured Article
-    </h4>
-    <h5 class="text-lg w-full font-bold p-1 text-center">
-        {{title}}
-    </h5>
-    <p class="w-full text-center"> by {{user.username}}</p>
-    <hr class="w-4/5 m-auto bg-dark-green" />
-    <p class="w-full px-5 md:px-10 py-5">{{post_content}}</p>
+	class='w-full lg:w-3/5 border-1 border-black border-solid rounded-xl m-3 text-left flex flex-row flex-wrap'
+>
+	<h4
+		class='text-lg w-full font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white text-left'
+	>
+		Featured Article
+	</h4>
+	<h5 class='text-lg w-full font-bold p-1 text-center'>
+		{{title}}
+	</h5>
+	<p class='w-full text-center'> by {{user.username}}</p>
+	<hr class='w-4/5 m-auto bg-dark-green' />
+	<p class='w-full px-5 md:px-10 py-5'>
+		<a href='{{post_content}}'> {{post_content}} </a>
+	</p>
 </section>
