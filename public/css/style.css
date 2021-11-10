@@ -171,11 +171,8 @@ section {
 
 #add-garden-modal {
   visibility: hidden;
-  position: absolute;
   z-index: 1;
   margin: auto;
-  left: 40%;
-  top: 20%;
 }
 
 #add-animal-modal {
@@ -341,6 +338,13 @@ footer {
 #contact-us {
   background-image: url('/assets/ducks-n-rabbits.jpg');
   background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#404-bg {
+  background-image: url('/assets/weather-forecast.png');
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
