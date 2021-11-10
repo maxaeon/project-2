@@ -1,9 +1,12 @@
-<article class="post w-3/5 flex flex-row flex-wrap m-auto bg-off-white rounded-xl my-20">
+<article class="post w-full md:w-3/5 flex flex-row flex-wrap m-auto bg-off-white rounded-xl my-20 mx-5">
 
   {{!-- double curlies used for HTML attributes --}}
   <h3 class="text-4xl title w-full bg-dark-green text-off-white mb-10 px-10 pt-10 pb-5 rounded-t-xl">{{title}}</h3>
   <br />
-  <a href="{{post_content}}" class="pl-20 w-4/5">{{post_content}}</a>
+  <div class="w-full p-10">
+
+  <a href="{{post_content}}" class=" w-4/5">{{post_content}}</a>
+  </div>
   <br />
   <br />
   <div class="meta w-full p-5">
