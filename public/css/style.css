@@ -362,6 +362,18 @@ main {
 	margin-bottom: 5%;
 }
 
+#blog-container .blog-post:nth-of-type(even) {
+  background: #F5F5F5;
+}
+
+#signup-container {
+  background-image: url('/assets/ducks-n-rabbits.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 70%;
+}
+
 footer {
 <<<<<<< HEAD
 	border-top: 1px solid #ccc;
@@ -372,6 +384,10 @@ footer {
 }
 =======
   border-top: 1px solid #ccc;
+  background-image: url('/assets/weather-forecast.png');
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   padding: 1%;
@@ -387,7 +403,7 @@ footer {
 
 #contact-us {
   background-image: url('/assets/ducks-n-rabbits.jpg');
-  background-position: bottom right;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -395,8 +411,10 @@ footer {
 >>>>>>> 1e99e798181a364bf8cb20ae42403d1b91fb1a2c
 =======
 
-#404-bg {
-  background-image: url('/assets/weather-forecast.png');
+
+
+#about-us {
+  background-image: url('/assets/pumpkin.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
