@@ -201,11 +201,8 @@ section {
 	top: 20%;
 =======
   visibility: hidden;
-  position: absolute;
   z-index: 1;
   margin: auto;
-  left: 40%;
-  top: 20%;
 }
 
 #add-animal-modal {
@@ -394,4 +391,14 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
 }
+<<<<<<< HEAD
 >>>>>>> 1e99e798181a364bf8cb20ae42403d1b91fb1a2c
+=======
+
+#404-bg {
+  background-image: url('/assets/weather-forecast.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+>>>>>>> caa5403d91525ac8bbee032cdc9401797a13d41c
