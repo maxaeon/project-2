@@ -323,7 +323,7 @@ main {
 footer {
   border-top: 1px solid #ccc;
   background-image: url('/assets/weather-forecast.png');
-  background-position: center;
+  background-position: bottom right;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
