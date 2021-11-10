@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<section class="w-full lg:w-1/2 bg-med-green border-1 border-black border-solid rounded-xl m-3 text-left">
+=======
 <section class="w-full lg:w-1/2 border-1 border-black border-solid rounded-xl m-3 text-left min-h-56">
+>>>>>>> 1e99e798181a364bf8cb20ae42403d1b91fb1a2c
     <h4 class="text-lg font-bold rounded-t-xl p-3 border-b-2 border-black bg-off-white flex flex-row justify-between">
 
         <p>Gardens</p>
@@ -9,11 +13,11 @@
             </svg>
         </span>
     </h4>
-    <ul class="flex justify-between flex-wrap">
+    <ul class="flex justify-between flex-wrap bg-light-green mb-2">
 
         <!-- User's gardens -->
         {{#each gardens as |garden|}}
-        <li class="w-full border-b-1 flex justify-between mb-3 p-3">
+        <li class="w-full border-b-1 flex justify-between p-3 font-semibold border-black border-1 divide-y md:text-sm bg-med-green text-white">
             <a href="/garden/{{garden.id}}"> {{ garden.title }} </a>
             <span class="self-center delete-garden">
                 <svg xmlns="http://www.w3.org/2000/svg"  id="{{garden.id}}" class="h-5 w-5" viewBox="0 0 20 20" fill="red">
