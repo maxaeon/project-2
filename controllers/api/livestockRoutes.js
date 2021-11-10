@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Livestock, User } = require("../../models");
 // const withAuth = require('../../utils/auth');
 
-// CREATE a Livestock Project
+// CREATE a Animal
 router.post("/", async (req, res) => {
   try {
     const newLivestock = await Livestock.create({
@@ -14,19 +14,17 @@ router.post("/", async (req, res) => {
   }
 });
 
-// GET all Livestocks
+// GET all Animals
 router.get("/", async (req, res) => {
   try {
-    const livestockData = await Livestock.findAll({
-      ...req.body,
-    });
-    res.status(200).json(livestockData);
+    const livestocksData = await Livestock.findAll();
+    res.status(200).json(livestocksData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-// GET a single Livestock
+// GET a single animal
 router.get("/:id", async (req, res) => {
   try {
     const livestockData = await Livestock.findByPk(req.params.id, {
@@ -40,7 +38,6 @@ router.get("/:id", async (req, res) => {
       res
         .status(404)
         .json({ message: "Sorry about that, no records found for this user." });
-
       return;
     }
     res.status(200).json(livestockData);
@@ -49,7 +46,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// DELETE a Livestock
+// DELETE a Animal
 router.delete("/:id", async (req, res) => {
   try {
     const livestockData = await Livestock.destroy({
@@ -61,8 +58,7 @@ router.delete("/:id", async (req, res) => {
     if (!livestockData) {
       res
         .status(404)
-        .json({ message: "Sorry about that, no records found for this user." });
-
+        .json({ message: "Sorry about that, no records found for this User" });
       return;
     }
 

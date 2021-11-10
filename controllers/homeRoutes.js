@@ -59,40 +59,16 @@ router.get("/plant/:id", async (req, res) => {
 
 
 // withAuth() calls next() anonymous fx OR res.redirect("/login")
-router.get("/add-post",  (req, res) => {
-  console.log("======================");
-  Post.findAll({
-    where: {
-      // use ID from session
-      user_id: req.session.user_id,
-    },
-    include: [
-      {
-        model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-        include: {
-          model: User,
-          attributes: ["username"],
-        },
-      },
-      {
-        model: User,
-        attributes: ["username"],
-      },
-    ],
-  })
-    .then((dbPostData) => {
-      // serialize data before passing to template
-      const posts = dbPostData.map((post) => post.get({ plain: true }));
-      // protect route from non logged in users
-      res.render("add-post", { 
-        posts, loggedIn: true 
-      });
+router.get("/add-post", async (req, res) => {
+  try {
+    res.render('add-post', {
+      loggedIn: req.session.loggedIn
     })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  } 
+  catch(error) {
+    console.log(error)
+    res.status(500).json(error)
+  }
 });
 
 router.get("/calendar", async (req, res) => {
@@ -201,8 +177,6 @@ router.get("/resources", async (req, res) => {
     })
     
     const posts = dbPostData.map((post) => post.get({ plain: true })); 
-    
-    console.log(posts)
 
 
     res.render("resources", { 

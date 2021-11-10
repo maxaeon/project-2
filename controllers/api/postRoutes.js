@@ -67,18 +67,24 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/",  (req, res) => {
+router.post("/", async (req, res) => {
   // expects {title: "Taskmaster goes public!", user_id: 1}
-  Post.create({
-    title: req.body.title,
-    post_content: req.body.post_content,
-    user_id: req.session.user_id,
-  })
-    .then((dbPostData) => res.json(dbPostData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  try {
+    const newPost = await Post.create({
+      title: req.body.title,
+      post_content: req.body.post_content,
+      user_id: req.session.user_id,
+    })
+
+    res.status(200).json(newPost)
+  }
+  catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+
+
+
 });
 
 router.put("/:id", (req, res) => {
@@ -105,7 +111,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/:id",  (req, res) => {
+router.delete("/:id", (req, res) => {
   console.log("id", req.params.id);
   Post.destroy({
     where: {

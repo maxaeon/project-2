@@ -11,28 +11,33 @@ router.get("/", withAuth, async (req, res) => {
       attributes: { exclude: ["password"] },
       include: [{ model: Garden }],
     });
-
-    const plantCount = await Plant.count()
-    const plantDatum = await Plant.findByPk(Math.floor(Math.random() * plantCount + 1))
-    const postCount = await Post.count()
-    const postDatum = await Post.findByPk(Math.floor(Math.random() * postCount + 1), {
+    // All the users posts
+    const allPosts = await Post.findAll({
+      where: {
+        user_id: req.session.user_id
+      }
+    })
+    // Plant of the Day
+    const plantDatum = await Plant.findByPk(1)
+    // Post of the Day
+    const postDatum = await Post.findByPk(1, {
       include: [{ model: User }]
     })
-    // const posts = Post.findAll()
-    // const resources = posts.map((resource) => resource.get({ plain: true }));
-    // console.log(resources)
+    const userPosts = allPosts.map((resource) => resource.get({ plain: true }));
+    console.log(userPosts)
     const post = await postDatum.get({ plain: true })
     const plant = await plantDatum.get({ plain: true })
     const user = await userData.get({ plain: true });
-
     res.render("dashboard", {
       ...user,
       ...post,
+      userPosts,
       plant,
       loggedIn: req.session.loggedIn
     });
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    console.log(error)
+    res.status(500).json(error);
   }
 });
 

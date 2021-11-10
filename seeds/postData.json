@@ -1,32 +1,32 @@
 [
     {
-        "title": "Ya dig it?",
-        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
+        "title": "The Logical Gardener",
+        "post_content": "https://logicalgardener.org/",
         "user_id": 1
     },
     {
-        "title": "Smell these roses!",
-        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
+        "title": "CDC Farm and Animal Guidelines",
+        "post_content": "https://www.cdc.gov/healthypets/pets/farm-animals.html",
+        "user_id": 2
+    },
+    {
+        "title": "Plant Therapy For Depression And Anxiety: The Healing Power Of Nature",
+        "post_content": "https://www.aerifyplants.com/post/plant-therapy-for-depression-and-anxiety-the-healing-power-of-nature ",
+        "user_id": 3
+    },
+    {
+        "title": "RAISING CHICKENS 101: HOW TO GET STARTED",
+        "post_content": "https://www.almanac.com/raising-chickens-101-how-get-started",
+        "user_id": 4
+    },
+    {
+        "title": "10 Winter-Friendly Plants for Your Outdoor Space",
+        "post_content": "https://www.hgtv.com/outdoors/landscaping-and-hardscaping/10-winter-friendly-plants-for-your-outdoor-space-pictures",
         "user_id": 1
     },
     {
-        "title": "How do you like them apples?",
-        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
-        "user_id": 1
-    },
-    {
-        "title": "Orange you glad I didn't grow bananas?",
-        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
-        "user_id": 1
-    },
-    {
-        "title": "This is a title",
-        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
-        "user_id": 1
-    },
-    {
-        "title": "How to start your own garden with spades and hoes",
-        "post_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet. ",
-        "user_id": 1
+        "title": "15 Striking Plants for Winter Color",
+        "post_content": "https://www.hgtv.com/outdoors/flowers-and-plants/15-striking-plants-for-winter-color-pictures",
+        "user_id": 2
     }
 ]
