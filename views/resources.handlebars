@@ -4,10 +4,10 @@
         <h4 class="text-3xl p-2 bg-dark-green rounded-t-xl text-off-white">
             Resources
         </h4>
-        <div
+        <div id="blog-container"
             class="border-solid border-1 border-gray-400 bg-light-green text-midnight-green rounded-b-xl flex flex-row flex-wrap">
             {{#each posts as |post|}}
-            <div class="w-full my-5 px-5 text-left">
+            <div class="w-full px-5 py-7 text-left blog-post">
                 <a href="/post/{{post.id}}" class="text-xl ">{{post.title}}</a>
                 <div>written by {{user.username}}</div>
                 <div>{{format_date createdAt}}</div>
