@@ -322,6 +322,10 @@ main {
 
 footer {
   border-top: 1px solid #ccc;
+  background-image: url('/assets/weather-forecast.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   padding: 1%;
@@ -337,13 +341,15 @@ footer {
 
 #contact-us {
   background-image: url('/assets/ducks-n-rabbits.jpg');
-  background-position: bottom right;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#404-bg {
-  background-image: url('/assets/weather-forecast.png');
+
+
+#about-us {
+  background-image: url('/assets/pumpkin.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
