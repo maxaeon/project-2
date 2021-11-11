@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Livestock extends Model {}
+class Livestock extends Model { }
 
 Livestock.init(
   {
@@ -11,42 +11,14 @@ Livestock.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    animal_species: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    breed: {
-      type: DataTypes.STRING,
-    },
-    when_fertile: {
-      type: DataTypes.STRING,
-    },
-    offspring_number: {
-      type: DataTypes.STRING,
-    },
-    gestation: {
-      type: DataTypes.INTEGER,
-    },
-    when_to_sell_offspring: {
-      type: DataTypes.STRING,
-    },
-    habitat: {
-      type: DataTypes.STRING,
-    },
-    food: {
-      type: DataTypes.STRING,
-    },
-    stimulation: {
-      type: DataTypes.STRING,
-    },
-    adult_age: {
-      type: DataTypes.STRING,
-    },
-    adult_weight_lbs: {
-      type: DataTypes.INTEGER,
-    },
-    comments: {
-      type: DataTypes.STRING,
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     user_id: {
       type: DataTypes.INTEGER,
