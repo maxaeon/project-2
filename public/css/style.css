@@ -93,11 +93,11 @@ header,
 	border-bottom-width: 1px;
 }
 
-#add-garden, #prev-month, #next-month, #close-modal {
+#add-garden, #prev-month, #next-month, #close-modal, #close-modal-livestock, #add-livestock {
   cursor: pointer;
 }
 
-.delete-garden svg, .delete-post svg {
+.delete-garden svg, .delete-post svg, .delete-livestock svg {
   cursor: pointer;
 }
 
@@ -174,13 +174,14 @@ section {
 	height: min-content;
 }
 
-#add-garden-modal {
+#add-garden-modal, #add-livestock-modal {
 	visibility: hidden;
 	position: fixed;
 	z-index: 1;
 	margin: auto;
-	left: 40%;
-	top: 20%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 textarea,

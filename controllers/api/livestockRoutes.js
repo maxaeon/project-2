@@ -5,12 +5,16 @@ const { Livestock, User } = require("../../models");
 // CREATE a Animal
 router.post("/", async (req, res) => {
   try {
+    const { title, description } = req.body
     const newLivestock = await Livestock.create({
-      ...req.body,
+      title, 
+      description,
+      user_id: req.session.user_id
     });
+    console.log(newLivestock)
     res.status(200).json(newLivestock);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 

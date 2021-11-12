@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Post, User, Plant, Garden } = require("../models");
+const { Post, User, Plant, Garden, Livestock } = require("../models");
 const withAuth = require("../utils/auth");
 
 // GET route for main page
@@ -9,7 +9,7 @@ router.get("/", withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: Garden }],
+      include: [{ model: Garden }, { model: Livestock }],
     });
     // All the users posts
     const allPosts = await Post.findAll({
@@ -28,6 +28,7 @@ router.get("/", withAuth, async (req, res) => {
     const post = await postDatum.get({ plain: true })
     const plant = await plantDatum.get({ plain: true })
     const user = await userData.get({ plain: true });
+    console.log(user)
     res.render("dashboard", {
       ...user,
       ...post,
