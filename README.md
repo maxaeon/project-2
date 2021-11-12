@@ -5,7 +5,7 @@ The project will allow users to register for an account, access information abou
 
 ​
 ## How to Use
-Visit backyard-gardening.herokuapp.com 
+Visit https://chicken-running.herokuapp.com/
 
 ## Credits
 
