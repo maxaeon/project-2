@@ -28,12 +28,12 @@ Garden.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
-User.hasMany(Animal, {
-    foreignKey: 'user_id'
+Livestock.hasMany(Animal, {
+    foreignKey: 'livestock_id'
 })
 
-Animal.belongsTo(User, {
-    foreignKey: 'user_id'
+Animal.belongsTo(Livestock, {
+    foreignKey: 'livestock_id'
 })
 
 User.hasMany(Livestock, {
